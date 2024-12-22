@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "text": "Photos",
+      "url": "/photos/"
+    },
+    {
+      "text": "Vita",
+      "url": "/vita/"
+    },
+    {
+      "text": "Play",
+      "url": "https://www.bbc.com",
+      "newTab": true
+    }
+  ]
+}

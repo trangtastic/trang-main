@@ -1,0 +1,49 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{% block content %}
+<div>
+    <div>
+        <h1 data-highlight="primary">
+            {{ pageHeaderTitle }}
+        </h1>
+
+        <h2> {{vita.persona.title}} </h2>
+        <ul>
+            {% for item in vita.persona.items %}
+            <li>
+                <strong>{{ item.title }}</strong> {{ item.property }}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>{{vita.film.title}}</h2>
+        <ul>
+            {% for item in vita.film.items %}
+            <li>
+                <a href="{{ item.url }}" target="_blank" class="event">
+                    <span class="year">{{ item.year }}</span>
+                    <span class="production">{{ item.production }}</span>
+                    <span class="company">{{ item.company }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>{{vita.stage.title}}</h2>
+        <ul>
+            {% for item in vita.stage.items %}
+            <li>
+                <a href="{{ item.url }}" target="_blank" class="event">
+                    <span>{{ item.year }}</span>
+                    <span>{{ item.production }}</span>
+                    <span>{{ item.company }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
+{% endblock %}

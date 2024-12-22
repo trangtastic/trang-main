@@ -1,0 +1,70 @@
+{
+  "title": "Vita.json",
+  "persona": {
+    "title": "Persona",
+    "items": [
+      {
+        "title": "Residence",
+        "property": "Wiesbaden"
+      },
+      {
+        "title": "Height",
+        "property": "154cm"
+      },
+      {
+        "title": "Dialect",
+        "property": "Berlin"
+      },
+      {
+        "title": "Licence",
+        "property": "B - Car"
+      }
+    ]
+  },
+  "film": {
+    "title": "Film",
+    "items": [
+      {
+        "year": "2024",
+        "production": "ASBEST",
+        "company": "ARD",
+        "url": "https://www.lipsum.com/"
+      },
+      {
+        "year": "2023",
+        "production": "Eine Billion Dollar",
+        "company": "Paramount",
+        "url": "https://www.lipsum.com/"
+      },
+      {
+        "year": "2022",
+        "production": "Ein Starkes Team",
+        "company": "ZDF",
+        "url": "https://www.lipsum.com/"
+      }
+    ]
+  },
+  "stage": {
+    "title": "Stage",
+    "items": [
+      {
+        "year": "2024",
+        "production": "Versicherungsabend",
+        "company": "Staatstheater Lorem Ipsum",
+        "url": "https://www.lipsum.com/"
+      },
+      {
+        "year": "2023",
+        "production": "Spiel der Illusionen",
+        "company": "Staatstheater Lorem Ipsum",
+        "url": "https://www.lipsum.com/"
+      },
+      {
+        "year": "2022",
+        "production": "Frauen vor",
+        "company": "Staatstheater Lorem Ipsum",
+        "url": "https://www.lipsum.com/"
+      }
+    ]
+  }
+}

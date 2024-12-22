@@ -1,0 +1,41 @@
+<article>
+    <div>
+        <div>
+            <nav>
+                <ul>
+                    {% for item in contact.items %}
+                    <li>
+                        <a href="{{ item.url }}" target="_blank">
+                            {{ item.text }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</article>
+
+<!-- <article class="[ cta ] [ dot-shadow panel ] [ bg-dark-shade color-light ]">
+    <div class="wrapper">
+        <div class="[ cta__inner ] [ flow ]">
+            <h2 class="[ cta__heading ] [ headline ]" data-highlight="quaternary">{{ footer.title }}</h2>
+            <p class="[ cta__summary ] [ measure-short ]">{{ footer.url }}</p>
+            <div class="cta__action">
+                <a class="button" data-variant="ghost" href="{{ ctaPrefix.buttonUrl }}">{{ footer.url }}</a>
+            </div>
+
+            <nav class="[ footer ] [ font-sans ]" aria-label="Primary">
+                <ul class="footer__list">
+                    {% for item in footer.items %}
+                    <li>
+                        <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                        >{{ item.text }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</article> -->

@@ -1,0 +1,28 @@
+{ "title": "< Next />",
+  "items": [
+    {
+      "date": "Mo. 24 Dez",
+      "production": "Lorem Ipsum",
+      "location": "Staatstheater Lorem Ipsum",
+      "url": "https://www.lipsum.com/"
+    },
+    {
+      "date": "Mo. 24 Dez",
+      "production": "Lorem Ipsum",
+      "location": "Staatstheater Lorem Ipsum",
+      "url": "https://www.lipsum.com/"
+    },
+    {
+      "date": "Mo. 24 Dez",
+      "production": "Lorem Ipsum",
+      "location": "Staatstheater Lorem Ipsum",
+      "url": "https://www.lipsum.com/"
+    },
+    {
+      "date": "Mo. 24 Dez",
+      "production": "Lorem Ipsum",
+      "location": "Staatstheater Lorem Ipsum",
+      "url": "https://www.lipsum.com/"
+    }
+  ]
+}

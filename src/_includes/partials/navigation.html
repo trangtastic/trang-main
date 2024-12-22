@@ -1,0 +1,43 @@
+<header role="banner">
+    <div>
+        <div>
+            <a href="/" aria-label="{{ site.name }} - home"> Trang Lincoln
+            </a>
+            <nav>
+                <ul>
+                    {% for item in navigation.items %}
+                    <li>
+                        <a href="{{ item.url }}"
+                           {% if item.newTab %} target="_blank" rel="noopener noreferrer" {% endif %}
+                           {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                        >
+                            {{ item.text }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<!-- <header role="banner" class="site-head">
+    <div class="wrapper">
+        <div class="site-head__inner">
+                <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand"> Trang Dông
+                </a>
+            <nav class="[ nav ] [ site-head__nav ] [ font-sans ]" aria-label="Primary">
+                <ul class="nav__list">
+                    {% for item in navigation.items %}
+                    <li>
+                        <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                        >{{ item.text }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> -->
