@@ -7,7 +7,7 @@
                 <ul>
                     {% for item in navigation.items %}
                     <li>
-                        <a href="{{ item.url }}"
+                        <a href="{{ item.url | url }}"
                            {% if item.newTab %} target="_blank" rel="noopener noreferrer" {% endif %}
                            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
                         >

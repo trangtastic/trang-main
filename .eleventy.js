@@ -17,6 +17,7 @@ module.exports = (config) => {
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
+        pathPrefix: "/trang-demo/",
         dir: {
             input: 'src',
             output: 'docs',
