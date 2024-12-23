@@ -13,6 +13,9 @@ module.exports = (config) => {
             .filter((file) => /\.(jpe?g|png|gif|webp)$/i.test(file));
     });
 
+    // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+    config.setUseGitIgnore(false);
+
     return {
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',

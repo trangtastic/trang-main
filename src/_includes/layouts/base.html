@@ -1,10 +1,35 @@
 <!DOCTYPE html>
+{% set assetHash = global.random() %}
 <html lang="de">
 <head>
     <meta charset="UTF-8" />
     {% include "partials/meta.html" %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
+
+    <!-- one -->
+    <style>{% include "css/critical.css" %}</style>
+
+    {# Add facility for pages to declare an array of critical styles #}
+    {% if pageCriticalStyles %}
+    {% for item in pageCriticalStyles %}
+    <!-- two -->
+    <style>{% include item %}</style>
+    {% endfor %}
+    {% endif %}
+
+    <!-- three -->
+    <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
+
+    {# Add facility for pages to declare an array of stylesheet paths #}
+    {% if pageStylesheets %}
+    {% for item in pageStylesheets %}
+    <!-- four -->
+    <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+    {% endfor %}
+    {% endif %}
+
+
 </head>
 <body>
 
