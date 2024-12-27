@@ -6,10 +6,10 @@
     </div>
     {% for item in schedule.items %}
     <li>
-        <a href="{{ item.url }}" target="_blank" class="event">
-            <span class="date">{{ item.date }}</span>
-            <span class="production">{{ item.production }}</span>
-            <span class="location">{{ item.location }}</span>
+        <a href="{{ item.url }}" target="_blank">
+            <span>{{ item.date }}</span>
+            <span>{{ item.production }}</span>
+            <span>{{ item.location }}</span>
         </a>
     </li>
     {% endfor %}

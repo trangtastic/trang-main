@@ -2,9 +2,10 @@
 
 {% block content %}
 <h1>Photos</h1>
-<div class="gallery">
+<div>
     {% for image in collections.photosList %}
-    <img src="/images/photos/{{ image }}" alt="Photo {{ loop.index }}">
+    <!-- <img src="/images/photos/{{ image }}" alt="Photo {{ loop.index }}"> -->
+    <img src="{{ '/images/photos/' | url }}{{ image }}" alt="Image description">
     {% endfor %}
 </div>
 

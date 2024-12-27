@@ -22,10 +22,10 @@
         <ul>
             {% for item in vita.film.items %}
             <li>
-                <a href="{{ item.url }}" target="_blank" class="event">
-                    <span class="year">{{ item.year }}</span>
-                    <span class="production">{{ item.production }}</span>
-                    <span class="company">{{ item.company }}</span>
+                <a href="{{ item.url }}" target="_blank">
+                    <span>{{ item.year }}</span>
+                    <span>{{ item.production }}</span>
+                    <span>{{ item.company }}</span>
                 </a>
             </li>
             {% endfor %}
@@ -35,7 +35,7 @@
         <ul>
             {% for item in vita.stage.items %}
             <li>
-                <a href="{{ item.url }}" target="_blank" class="event">
+                <a href="{{ item.url }}" target="_blank">
                     <span>{{ item.year }}</span>
                     <span>{{ item.production }}</span>
                     <span>{{ item.company }}</span>
