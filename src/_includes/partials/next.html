@@ -1,0 +1,16 @@
+<article class="[ next ]">
+    <div class="wrapper">
+        <h1>
+            <em>{{ next.title }} </em>
+        </h1>
+        {% for item in next.items %}
+        <li>
+            <a href="{{ item.url }}" target="_blank">
+                <span>{{ item.date }}</span>
+                <span>{{ item.production }}</span>
+                <span>{{ item.location }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </div>
+</article>

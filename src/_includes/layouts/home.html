@@ -1,14 +1,16 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<article>
-    <div>
-        <iframe width="560" height="315" src="{{ video }}"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</article>
+<div class="wrapper">
+    <article class="intro">
+        <div>
+            <iframe width="560" height="315" src="{{ video }}"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </article>
+</div>
 
-{% include "partials/schedule.html" %}
-{% include "partials/contact.html" %}
+{% include "partials/next.html" %}
+{% include "partials/footer.html" %}
 
 {% endblock %}
 

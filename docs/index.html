@@ -10,13 +10,13 @@
     <title>Home</title>
 
     <!-- one -->
-    <style>@charset "UTF-8";*,::after,::before{box-sizing:border-box}ol[class],ul[class]{padding:0}blockquote,body,dd,dl,figure,h1,h2,h3,h4,ol[class],p,ul[class]{margin:0}html{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}ol[class],ul[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){*{animation-duration:10ms!important;animation-iteration-count:1!important;transition-duration:10ms!important;scroll-behavior:auto!important}}</style>
+    <style>@charset "UTF-8";*,::after,::before{box-sizing:border-box}ol[class],ul[class]{padding:0}blockquote,body,dd,dl,figure,h1,h2,h3,h4,ol[class],p,ul[class]{margin:0}html{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}ol[class],ul[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}button,input,select,textarea{font:inherit}@media (prefers-reduced-motion:reduce){*{animation-duration:10ms!important;animation-iteration-count:1!important;transition-duration:10ms!important;scroll-behavior:auto!important}}.nav{line-height:1;font-weight:900;margin-top:-1rem;margin-inline-start:-1rem;display:flex;align-items:center;justify-content:space-between}.nav__list{display:flex;flex-wrap:wrap}.nav__list>*{padding-top:1rem;padding-inline-start:1rem}.nav a{text-decoration:none;display:block;position:relative}.nav a[aria-current=page]:before,.nav a[data-state=active]:before{content:"";display:block;width:100%;height:.25rem;position:absolute;top:100%;left:0;margin-top:.25rem;background:#fc3e59}.logo{background-color:#ff0}.wrapper{max-width:70rem;padding:0 1.33rem;margin-left:auto;margin-right:auto;position:relative;align-items:center}:root{--flow-space:1.77rem}body{background:#f9f4e3;color:#263147;line-height:1.5;font-size:1.33rem;font-family:Literata,Georgia,serif}a:not([class]){color:currentColor;text-decoration-color:#fa576e}:focus{outline:2px dashed #513aa6;outline-offset:.25rem}main:focus{outline:0}h1,h2,h3,h4{font-weight:900;font-family:"Red Hat Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.1}::selection{color:#f9f4e3;background:rgba(38,49,71,.99)}::-webkit-scrollbar{height:1rem}::-webkit-scrollbar-track{background-color:transparent;border:1px solid #505c73;border-radius:.25rem}::-webkit-scrollbar-thumb{background-color:#38445b;border-radius:.25rem}</style>
 
     
     
 
     <!-- three -->
-    <link rel="stylesheet" media="print" href="/trang-demo/fonts/fonts.css?b1c1-9aeb-9799" onload="this.media='all'" />
+    <link rel="stylesheet" media="print" href="/trang-demo/fonts/fonts.css?2c08-d82e-8cfd" onload="this.media='all'" />
 
 
     
@@ -26,41 +26,38 @@
 </head>
 <body>
 
-<header role="banner">
-    <div>
-        <div>
-            <a href="/" aria-label="Trang Lincoln - home"> Trang Lincoln
-            </a>
-            <nav>
-                <ul>
-                    
-                    <li>
-                        <a href="/trang-demo/photos/"
-                           
-                           >
-                            Photos
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="/trang-demo/vita/"
-                           
-                           >
-                            Vita
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="https://www.bbc.com"
-                            target="_blank" rel="noopener noreferrer" 
-                           >
-                            Play
-                        </a>
-                    </li>
-                    
-                </ul>
-            </nav>
-        </div>
+<header>
+    <div class="wrapper">
+        <nav class="[ nav ] [ font-sans ]" aria-label="Primary">
+            <a href="/" aria-label="Trang Lincoln - home"> Trang Lincoln</a>
+            <ul class="nav__list">
+                
+                <li>
+                    <a href="/trang-demo/photos/"
+                       
+                       >
+                        Photos
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/trang-demo/vita/"
+                       
+                       >
+                        Vita
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.bbc.com"
+                        target="_blank" rel="noopener noreferrer" 
+                       >
+                        Play
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -98,54 +95,56 @@
 </header> -->
 <main tabindex="-1" id="main-content">
     
-<article>
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dxsawQOQ9lU"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</article>
+<div class="wrapper">
+    <article class="intro">
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dxsawQOQ9lU"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </article>
+</div>
 
-<article>
-    <div>
+<article class="[ next ]">
+    <div class="wrapper">
         <h1>
             <em>&lt; Next /&gt; </em>
         </h1>
+        
+        <li>
+            <a href="https://www.lipsum.com/" target="_blank">
+                <span>Mo. 24 Dez</span>
+                <span>Lorem Ipsum</span>
+                <span>Staatstheater Lorem Ipsum</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.lipsum.com/" target="_blank">
+                <span>Mo. 24 Dez</span>
+                <span>Lorem Ipsum</span>
+                <span>Staatstheater Lorem Ipsum</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.lipsum.com/" target="_blank">
+                <span>Mo. 24 Dez</span>
+                <span>Lorem Ipsum</span>
+                <span>Staatstheater Lorem Ipsum</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.lipsum.com/" target="_blank">
+                <span>Mo. 24 Dez</span>
+                <span>Lorem Ipsum</span>
+                <span>Staatstheater Lorem Ipsum</span>
+            </a>
+        </li>
+        
     </div>
-    
-    <li>
-        <a href="https://www.lipsum.com/" target="_blank">
-            <span>Mo. 24 Dez</span>
-            <span>Lorem Ipsum</span>
-            <span>Staatstheater Lorem Ipsum</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="https://www.lipsum.com/" target="_blank">
-            <span>Mo. 24 Dez</span>
-            <span>Lorem Ipsum</span>
-            <span>Staatstheater Lorem Ipsum</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="https://www.lipsum.com/" target="_blank">
-            <span>Mo. 24 Dez</span>
-            <span>Lorem Ipsum</span>
-            <span>Staatstheater Lorem Ipsum</span>
-        </a>
-    </li>
-    
-    <li>
-        <a href="https://www.lipsum.com/" target="_blank">
-            <span>Mo. 24 Dez</span>
-            <span>Lorem Ipsum</span>
-            <span>Staatstheater Lorem Ipsum</span>
-        </a>
-    </li>
-    
 </article>
-<article>
-    <div>
+<article class="[ footer ]">
+    <div class="wrapper">
         <div>
             <nav>
                 <ul>
@@ -197,6 +196,36 @@
 
             <nav class="[ footer ] [ font-sans ]" aria-label="Primary">
                 <ul class="footer__list">
+                    
+                    <li>
+                        <a href="mailto:trang@magenta.de?subject=Hey Trang!" 
+                        >-&gt; Email</a
+                        >
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.instagram.com/trangtastic" 
+                        >-&gt; Instagram</a
+                        >
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.filmmakers.eu/en/actors/trang-dong" 
+                        >-&gt; Filmmakers</a
+                        >
+                    </li>
+                    
+                    <li>
+                        <a href="linked.com/trangdong" 
+                        >-&gt; Linkedin</a
+                        >
+                    </li>
+                    
+                    <li>
+                        <a href=" imdb.com/trangdong" 
+                        >-&gt; IMDb</a
+                        >
+                    </li>
                     
                 </ul>
             </nav>

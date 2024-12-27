@@ -1,1 +1,62 @@
 @use 'reset';
+@use 'blocks/nav';
+@use 'utilities/wrapper';
+
+// Global styles start
+:root {
+  --flow-space: 1.77rem;
+}
+
+body {
+  background: #f9f4e3;
+  color: #263147;
+  line-height: 1.5;
+  font-size: 1.33rem;
+  font-family: Literata, Georgia, serif;
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-color: #fa576e
+}
+
+:focus {
+  outline: 2px dashed #513aa6;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  font-family: "Red Hat Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.1;
+}
+
+// High contrast selection because it can help visually-impaired
+// folks read the text easier
+::selection {
+  color: #f9f4e3;
+  background: rgba(38, 49, 71, .99)
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid #505c73;
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #38445b;
+  border-radius: 0.25rem;
+}
