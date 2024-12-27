@@ -1,3 +1,7 @@
+header {
+  padding: 1.75rem 0;
+}
+
 .nav {
   line-height: 1;
   font-weight: 900;
@@ -12,7 +16,7 @@
     flex-wrap: wrap;
 
     > * {
-      padding-top: 1rem;
+      //padding-top: 1rem;
       padding-inline-start: 1rem;
     }
   }
@@ -38,8 +42,4 @@
       }
     }
   }
-}
-
-.logo {
-   background-color: yellow;
 }
