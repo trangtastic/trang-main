@@ -17,12 +17,13 @@ body {
   color: #263147;
   line-height: 1.5;
   font-size: 1.33rem;
-  font-family: Helvetica, sans-serif;
+  font-family: Inconsolata, monospace;
 }
 
 a:not([class]) {
   color: currentColor;
-  text-decoration-color: #fa576e
+  text-decoration: none;
+
 }
 
 :focus {

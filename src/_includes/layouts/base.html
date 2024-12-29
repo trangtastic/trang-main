@@ -32,30 +32,10 @@
 
 </head>
 <body>
-<div class="cursor" id="custom-cursor"></div>
 {% include "partials/navigation.html" %}
 <main tabindex="-1" id="main-content">
     {% block content %}
     {% endblock %}
 </main>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const cursor = document.getElementById('custom-cursor');
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.pageX}px`;
-            cursor.style.top = `${e.pageY}px`;
-        });
-    });
-    const overlay = document.querySelector('.iframe-overlay');
-
-    overlay.addEventListener('mouseenter', () => {
-        overlay.style.pointerEvents = 'none';
-    });
-
-    overlay.addEventListener('mouseleave', () => {
-        overlay.style.pointerEvents = 'auto';
-    });
-</script>
 </body>
 </html>

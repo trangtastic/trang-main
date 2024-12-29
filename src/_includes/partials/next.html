@@ -1,18 +1,45 @@
-<article class="[ next ]">
+<article class="[ events ]">
     <div class="wrapper">
         <h1>
             <em>{{ next.title }} </em>
         </h1>
-        <ul class="next__list">
+        <div class=" [ events__container ] ">
             {% for item in next.items %}
-            <li>
-                <a href="{{ item.url }}" target="_blank">
-                    <span>{{ item.date }}</span>
-                    <span>{{ item.production }}</span>
-                    <span>{{ item.location }}</span>
+
+                <a class="event__link flex__container" href="{{ item.url }}" target="_blank">
+                    <div class="event__date">
+                        <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>
+                        {% set dateParts = item.date.split('.') %}
+                        <div class="date">{{ dateParts[0] }}.{{ dateParts[1] }}</div>
+                        <div class="year">{{ dateParts[2] }}</div>
+                    </div>
+                    <div class="event__details">
+                        <div class="event__production">{{ item.production }}</div>
+                        <div class="event__location">{{ item.location }}</div>
+                    </div>
+                    <div class="event__image">
+                        <img src="{{ item.image }}" alt="{{ item.production }} - Thumbnail">
+                    </div>
                 </a>
-            </li>
+
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </article>
+
+
+<!--
+<ul class="next__list">
+    {% for item in next.items %}
+    <li>
+        <a href="{{ item.url }}" target="_blank">
+            <span>{{ item.date }}</span>
+            <span>{{ item.production }}</span>
+            <span>{{ item.location }}</span>
+        </a>
+    </li>
+
+
+
+    {% endfor %}
+</ul>-->

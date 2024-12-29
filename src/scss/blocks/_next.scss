@@ -1,3 +1,32 @@
-.next{
+.events{
   text-align: center;
+}
+
+.events__container {
+ display: inline-flex;
+ flex-direction: column;
+  gap: 20px;
+}
+
+.flex__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: lightblue;
+}
+
+.event__date, .event__details, .event__image {
+  background-color: lightgrey;
+}
+
+.event__details{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event__image {
+  margin-left: auto;
+  width: 100px;
 }

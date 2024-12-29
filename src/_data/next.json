@@ -1,28 +1,39 @@
 { "title": "< Next />",
   "items": [
     {
-      "date": "Mo. 24 Dez",
-      "production": "Lorem Ipsum",
-      "location": "Staatstheater Lorem Ipsum",
-      "url": "https://www.lipsum.com/"
+      "date": "13.01.2024",
+      "production": "Spiel der Illusionen",
+      "location": "Staatstheater Wiesbaden",
+      "url": "https://www.lipsum.com/",
+      "image": "images/events/event-placeholder.png"
     },
     {
-      "date": "Mo. 24 Dez",
-      "production": "Lorem Ipsum",
-      "location": "Staatstheater Lorem Ipsum",
-      "url": "https://www.lipsum.com/"
+      "date": "14.01.2024",
+      "production": "Haben Sie 5 Minuten Zeit?",
+      "location": "Staatstheater Wiesbaden",
+      "url": "https://www.lipsum.com/",
+      "image": "images/events/event-placeholder.png"
     },
     {
-      "date": "Mo. 24 Dez",
-      "production": "Lorem Ipsum",
-      "location": "Staatstheater Lorem Ipsum",
-      "url": "https://www.lipsum.com/"
+      "date": "15.01.2024",
+      "production": "Haben",
+      "location": "Staatsthden",
+      "url": "https://www.lipsum.com/",
+      "image": "images/events/event-placeholder.png"
     },
     {
-      "date": "Mo. 24 Dez",
+      "date": "16.01.2024",
       "production": "Lorem Ipsum",
-      "location": "Staatstheater Lorem Ipsum",
-      "url": "https://www.lipsum.com/"
+      "location": "Staatsthsum",
+      "url": "https://www.lipsum.com/",
+      "image": "images/events/event-placeholder.png"
+    },
+    {
+      "date": "13.01.2024",
+      "production": "Spiel der Illusionen",
+      "location": "Staatstheater esbaen",
+      "url": "https://www.lipsum.com/",
+      "image": "images/events/event-placeholder.png"
     }
   ]
 }
