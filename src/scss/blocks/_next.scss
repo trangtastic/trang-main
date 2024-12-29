@@ -5,7 +5,12 @@
 .events__container {
  display: inline-flex;
  flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .flex__container {
@@ -14,16 +19,32 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: lightblue;
+  background-color: white;
+  border: 2px solid #b1b1b1;
 }
 
 .event__date, .event__details, .event__image {
-  background-color: lightgrey;
+  //background-color: lightgrey;
+}
+
+.event__date{
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.2;
+
+  .weekday, .year{
+    font-size: 0.8em;
+  }
 }
 
 .event__details{
   margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
+
+  .event__location {
+    font-size: 0.8em;
+  }
 }
 
 .event__image {
