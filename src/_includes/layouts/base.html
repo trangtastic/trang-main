@@ -30,6 +30,31 @@
     {% endfor %}
     {% endif %}
 
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Cycle plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+
+
+    <script>
+        jQuery(function($){
+            // Cycle plugin
+            $('.slides').cycle({
+                fx:     'none',
+                speed:   150,
+                timeout: 5
+            }).cycle("pause");
+
+            // Pause &amp; play on hover
+            $('.event__link').hover(function(){
+                $(this).find('.slides').addClass('active').cycle('resume');
+            }, function(){
+                $(this).find('.slides').removeClass('active').cycle('pause');
+            });
+        });
+    </script>
+
 </head>
 <body>
 {% include "partials/navigation.html" %}

@@ -4,36 +4,36 @@
       "date": "13.01.2024",
       "production": "Spiel der Illusionen",
       "location": "Staatstheater Wiesbaden",
-      "url": "https://www.lipsum.com/",
-      "image": "images/events/event-placeholder.png"
+      "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/spiel-der-illusionen/",
+      "images": "images/events/5Minuten"
     },
     {
       "date": "14.01.2024",
       "production": "Haben Sie 5 Minuten Zeit?",
       "location": "Staatstheater Wiesbaden",
       "url": "https://www.lipsum.com/",
-      "image": "images/events/event-placeholder.png"
+      "images": "images/events/5Minuten"
     },
     {
       "date": "15.01.2024",
       "production": "Haben",
       "location": "Staatsthden",
       "url": "https://www.lipsum.com/",
-      "image": "images/events/event-placeholder.png"
+      "images": "images/events/6Minuten"
     },
     {
       "date": "16.01.2024",
       "production": "Lorem Ipsum",
       "location": "Staatsthsum",
       "url": "https://www.lipsum.com/",
-      "image": "images/events/event-placeholder.png"
+      "images": "images/events/5Minuten"
     },
     {
       "date": "13.01.2024",
       "production": "Spiel der Illusionen",
       "location": "Staatstheater esbaen",
       "url": "https://www.lipsum.com/",
-      "image": "images/events/event-placeholder.png"
+      "images": "images/events/6Minuten"
     }
   ]
 }

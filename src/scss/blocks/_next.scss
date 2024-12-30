@@ -3,51 +3,70 @@
 }
 
 .events__container {
- display: inline-flex;
- flex-direction: column;
-  gap: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-a {
+.event__link {
   text-decoration: none;
   color: black;
 }
 
 .flex__container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: white;
+  justify-content: flex-start;
+  background: white;
   border: 2px solid #b1b1b1;
 }
 
-.event__date, .event__details, .event__image {
-  //background-color: lightgrey;
-}
-
-.event__date{
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.event__date {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 15px;
   line-height: 1.2;
 
-  .weekday, .year{
+  .weekday,
+  .year {
     font-size: 0.8em;
   }
 }
 
 .event__details{
-  margin-left: auto;
   padding: 20px;
+  flex-shrink: 0;
+  margin-left: auto;
 
   .event__location {
     font-size: 0.8em;
   }
 }
 
-.event__image {
+.event__image, img, .slides__block{
+  display: flex;
+  height: 100%;
   margin-left: auto;
-  width: 100px;
 }
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.slides__block{
+  float: left;
+  background: #111 url('images/events/5Minuten/obst1.jpg') no-repeat center center;
+}
+
+.slides{
+  z-index:0;
+  visibility: hidden;
+}
+.slides.active{
+  visibility: visible;
+}
+
+
+
+
