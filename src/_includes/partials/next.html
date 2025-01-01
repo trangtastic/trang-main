@@ -20,10 +20,11 @@
                     <div class="event__production">{{ item.production }}</div>
                     <div class="event__location">{{ item.location }}</div>
                 </div>
-                <div class="slides__block">
+                <div class="slides__block"
+                     style="background: #111 url('{{ item.images }}/{{ item.imageFiles[0] }}') no-repeat center center;">
                     <ul class="slides">
                         {% for image in item.imageFiles %}
-                            <img src="{{ item.images | replace('src/', '') }}/{{ image }}" alt="{{ item.production }} - Slide {{ loop.index }}">
+                            <img src="{{ item.images }}/{{ image }}" alt="{{ item.production }} - Slide {{ loop.index }}">
                         {% endfor %}
                     </ul>
                 </div>
