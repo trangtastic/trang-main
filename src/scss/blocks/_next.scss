@@ -19,8 +19,8 @@
   background: #fff;
   //border: 1px outset #b1b1b1;
   align-items: center;
-  height: 80px;
-  width: 600px;
+  height: 100px;
+  width: 700px;
 }
 
 .event__date {
@@ -99,12 +99,12 @@
   opacity: 1;
 }
 
-a.slide {
+a.event__link {
   transition: 0.5s;
 }
 
-a.slide:hover,
-a.slide:focus {
+a.event__link:hover,
+a.event__link:focus {
   background-color: black;
   color: yellow;
 }
