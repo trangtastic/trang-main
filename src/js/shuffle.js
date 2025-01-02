@@ -1,15 +1,15 @@
-jQuery(function($){
-    // Cycle plugin
+jQuery(function($) {
+
     $('.slides').cycle({
-        fx:     'fade',
-        speed:   350,
-        timeout: 5
+        delay: 500,
+        fx: 'fade',
+        speed: 500,
+        timeout: 1000,
     }).cycle("pause");
 
-    // Pause &amp; play on hover
-    $('.event__link').hover(function(){
+    $('.event__link').hover(function() {
         $(this).find('.slides').addClass('active').cycle('resume');
-    }, function(){
+    }, function() {
         $(this).find('.slides').removeClass('active').cycle('pause');
     });
 });

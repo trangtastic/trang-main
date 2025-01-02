@@ -1,1 +1,1 @@
-jQuery(function(e){e(".slides").cycle({fx:"fade",speed:350,timeout:5}).cycle("pause"),e(".event__link").hover(function(){e(this).find(".slides").addClass("active").cycle("resume")},function(){e(this).find(".slides").removeClass("active").cycle("pause")})});
+jQuery(function(e){e(".slides").cycle({delay:500,fx:"fade",speed:500,timeout:1e3}).cycle("pause"),e(".event__link").hover(function(){e(this).find(".slides").addClass("active").cycle("resume")},function(){e(this).find(".slides").removeClass("active").cycle("pause")})});

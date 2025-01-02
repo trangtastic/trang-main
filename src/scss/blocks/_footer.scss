@@ -1,6 +1,11 @@
 .footer {
   background-color: #89A8B2;
   color: #f9f4e3;
+  font-size: 14px;
+
+  .wrapper {
+    margin-left: 150px;
+  }
 }
 
 .footer__list li a:hover{

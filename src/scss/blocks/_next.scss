@@ -36,10 +36,10 @@
   }
 
   .weekday{
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
   .year{
-    letter-spacing: 3px;
+    letter-spacing: 1px;
   }
 }
 
@@ -91,7 +91,10 @@
   visibility: hidden;
   position: relative;
   opacity: 0;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition-property: opacity, visibility;
+  transition-duration: 500ms, 500s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0ms;
 }
 
 .slides.active{
@@ -105,6 +108,6 @@ a.event__link {
 
 a.event__link:hover,
 a.event__link:focus {
-  background-color: black;
-  color: yellow;
+  background-color: #6681A9;
+  color: #fff;
 }
