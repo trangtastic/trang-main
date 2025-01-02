@@ -1,11 +1,12 @@
-{ "title": "< Next />",
+{
+  "title": "< Next/>",
   "items": [
     {
       "date": "13.01.2024",
       "production": "Spiel der Illusionen",
       "location": "Staatstheater Wiesbaden",
       "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/spiel-der-illusionen/",
-      "images": "images/events/5Minuten"
+      "images": "images/events/schale"
     },
     {
       "date": "14.01.2024",
@@ -19,7 +20,7 @@
       "production": "Haben",
       "location": "Staatsthden",
       "url": "https://www.lipsum.com/",
-      "images": "images/events/6Minuten"
+      "images": "images/events/schale"
     },
     {
       "date": "16.01.2024",
@@ -33,7 +34,7 @@
       "production": "Spiel der Illusionen",
       "location": "Staatstheater esbaen",
       "url": "https://www.lipsum.com/",
-      "images": "images/events/6Minuten"
+      "images": "images/events/schale"
     }
   ]
 }

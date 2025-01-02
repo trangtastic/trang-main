@@ -48,23 +48,35 @@
   margin-left: auto;
 }
 
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
 .slides__block{
   float: left;
-  background: #111 url('images/events/5Minuten/obst1.jpg') no-repeat center center;
+  width: 245px;
+  height: 138px;
+
+  ul{
+    width: 245px;
+    height: 138px;
+
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .slides{
   z-index:0;
   visibility: hidden;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
+
 .slides.active{
   visibility: visible;
+  opacity: 1;
 }
 
 

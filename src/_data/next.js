@@ -1,52 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-
-const eventData = {
-    "title": "< Next!! />",
-    "items": [
-        {
-            "date": "13.01.2024",
-            "production": "Spiel der Illusionen",
-            "location": "Staatstheater Wiesbaden",
-            "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/spiel-der-illusionen/",
-            "images": "images/events/5Minuten"
-        },
-        {
-            "date": "14.01.2024",
-            "production": "Haben Sie 5 Minuten Zeit?",
-            "location": "Staatstheater Wiesbaden",
-            "url": "https://www.lipsum.com/",
-            "images": "images/events/5Minuten"
-        },
-        {
-            "date": "15.01.2024",
-            "production": "Haben",
-            "location": "Staatsthden",
-            "url": "https://www.lipsum.com/",
-            "images": "images/events/6Minuten"
-        },
-        {
-            "date": "16.01.2024",
-            "production": "Lorem Ipsum",
-            "location": "Staatsthsum",
-            "url": "https://www.lipsum.com/",
-            "images": "images/events/5Minuten"
-        },
-        {
-            "date": "13.01.2024",
-            "production": "Spiel der Illusionen",
-            "location": "Staatstheater esbaen",
-            "url": "https://www.lipsum.com/",
-            "images": "images/events/6Minuten"
-        }
-    ]
-};
+const eventData = require('./nextdata.json');
 
 // Function to get jpg files from the directory path
 function getJpgFilesFromDirectory(directoryPath) {
     // Resolve the directory path to an absolute path
     const fullPath = path.resolve(process.cwd(), 'src', directoryPath); // Add 'src/' back here
-    console.log(`Resolved path: ${fullPath}`);
 
     // Check if the directory exists
     if (!fs.existsSync(fullPath)) {
@@ -80,5 +39,3 @@ const updatedEventItems = getUpdatedEventItems();
 
 // Export the JavaScript object (true JSON format)
 module.exports = updatedEventItems;
-
-console.log(updatedEventItems);
