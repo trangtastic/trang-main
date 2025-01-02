@@ -6,7 +6,7 @@
         <br>
         <div class="[ events__container ]">
             {% for item in next.items %}
-            <a class="event__link flex__container" href="{{ item.url }}" target="_blank" title="{{ item.production }}">
+            <a class="event__link flex__container slide" href="{{ item.url }}" target="_blank" title="{{ item.production }}">
                 <div class="event__date">
                     <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>
                     {% set dateParts = item.date.split('.') %}

@@ -53,6 +53,7 @@
   .event__location {
     font-size: 0.6em;
     line-height: 0.8;
+    letter-spacing: 2px;
   }
 }
 
@@ -98,6 +99,12 @@
   opacity: 1;
 }
 
+a.slide {
+  transition: 0.5s;
+}
 
-
-
+a.slide:hover,
+a.slide:focus {
+  background-color: black;
+  color: yellow;
+}

@@ -13,11 +13,14 @@
 }
 
 body {
-  background-color: #FFE6A9;
+  background-color: #C5D3E8;
   color: #263147;
   line-height: 1.5;
   font-size: 1.33rem;
-  font-family: Inconsolata, monospace;
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a:not([class]) {
@@ -39,7 +42,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Inconsolata, monospace;
   line-height: 1.1;
 }
 
