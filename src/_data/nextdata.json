@@ -1,5 +1,5 @@
 {
-  "title": "< Next/>",
+  "title": "_Termine_",
   "items": [
     {
       "date": "13.01.2024",
@@ -10,29 +10,29 @@
     },
     {
       "date": "14.01.2024",
-      "production": "Haben Sie 5 Minuten Zeit?",
+      "production": "Haben Sie 5 Minuten",
       "location": "Staatstheater Wiesbaden",
       "url": "https://www.lipsum.com/",
       "images": "images/events/5Minuten"
     },
     {
       "date": "15.01.2024",
-      "production": "Haben",
-      "location": "Staatsthden",
+      "production": "Haben Sie 5 Minuten Zeit?",
+      "location": "Staatstheater Wiesbaden",
       "url": "https://www.lipsum.com/",
       "images": "images/events/schale"
     },
     {
       "date": "16.01.2024",
-      "production": "Lorem Ipsum",
-      "location": "Staatsthsum",
+      "production": "Spiel der Illusionen",
+      "location": "Staatstheater Wiesbaden",
       "url": "https://www.lipsum.com/",
       "images": "images/events/5Minuten"
     },
     {
       "date": "13.01.2024",
-      "production": "Spiel der Illusionen",
-      "location": "Staatstheater esbaen",
+      "production": "Fassaden",
+      "location": "Staatstheater Wiesbaden",
       "url": "https://www.lipsum.com/",
       "images": "images/events/schale"
     }

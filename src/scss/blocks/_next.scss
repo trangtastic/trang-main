@@ -16,8 +16,11 @@
 .flex__container {
   display: flex;
   justify-content: flex-start;
-  background: white;
-  border: 2px solid #b1b1b1;
+  background: #fff;
+  //border: 1px outset #b1b1b1;
+  align-items: center;
+  height: 80px;
+  width: 600px;
 }
 
 .event__date {
@@ -25,20 +28,31 @@
   flex-direction: column;
   padding: 10px 0 10px 15px;
   line-height: 1.2;
+  text-align: center;
 
   .weekday,
   .year {
     font-size: 0.8em;
   }
+
+  .weekday{
+    letter-spacing: 4px;
+  }
+  .year{
+    letter-spacing: 3px;
+  }
 }
 
 .event__details{
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   flex-shrink: 0;
   margin-left: auto;
+  text-align: left;
 
   .event__location {
-    font-size: 0.8em;
+    font-size: 0.6em;
+    line-height: 0.8;
   }
 }
 
@@ -48,23 +62,28 @@
   margin-left: auto;
 }
 
-.slides__block{
+
+.slides__block {
   float: left;
-  width: 245px;
-  height: 138px;
+  background-color: #111;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 60%;
 
-  ul{
-    width: 245px;
-    height: 138px;
+  ul.slides {
+    height: 100%;
+    width: 100%;
 
-
-    img{
-      width: 100%;
+    img {
       height: 100%;
+      width: 100% !important;
       object-fit: cover;
     }
   }
 }
+
 
 .slides{
   z-index:0;

@@ -1,8 +1,9 @@
 <article class="[ events ]">
     <div class="wrapper">
         <h1>
-            <em>{{ next.title }}</em>
+            {{ next.title }}
         </h1>
+        <br>
         <div class="[ events__container ]">
             {% for item in next.items %}
             <a class="event__link flex__container" href="{{ item.url }}" target="_blank" title="{{ item.production }}">
@@ -17,10 +18,12 @@
                     <div class="event__location">{{ item.location }}</div>
                 </div>
                 <div class="slides__block"
-                     style="background: #111 url('{{ item.images }}/{{ item.imageFiles[0] }}') no-repeat center center;">
+                     style="background-image: url('{{ item.images }}/{{ item.imageFiles[0] }}');">
                     <ul class="slides">
                         {% for image in item.imageFiles %}
+                        {% if loop.index > 1 %}
                             <img src="{{ item.images }}/{{ image }}" alt="{{ item.production }} - Slide {{ loop.index }}">
+                        {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
