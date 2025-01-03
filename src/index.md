@@ -1,5 +1,5 @@
 ---
-title: 'Home'
-layout: 'layouts/home.html'
+title: 'Intro'
+layout: 'layouts/intro.html'
 ---
 index.md...

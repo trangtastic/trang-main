@@ -92,7 +92,7 @@
   position: relative;
   opacity: 0;
   transition-property: opacity, visibility;
-  transition-duration: 500ms, 500s;
+  transition-duration: 0ms, 0s;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0ms;
 }
@@ -103,7 +103,7 @@
 }
 
 a.event__link {
-  transition: 0.5s;
+  transition: 0s;
 }
 
 a.event__link:hover,

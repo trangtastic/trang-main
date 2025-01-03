@@ -2,7 +2,7 @@ jQuery(function($) {
 
     $('.slides').cycle({
         delay: 500,
-        fx: 'fade',
+        fx: 'none',
         speed: 500,
         timeout: 1000,
     }).cycle("pause");
