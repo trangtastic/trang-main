@@ -1,35 +1,19 @@
+$(document).ready(function () {
+    // Mobile Navigation Toggle
+    $('.mobile-toggle').click(function () {
+        $('.main_h').toggleClass('open-wide');
+        $(this).toggleClass('open-nav');
+    });
 
-// Mobile Navigation
-$('.mobile-toggle').click(function() {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.main_h').removeClass('open-nav');
-    } else {
-        $('.main_h').addClass('open-nav');
-    }
-});
+    $('.main_h li a').click(function () {
+        $('.main_h').removeClass('open-wide');
+        $('.mobile-toggle').removeClass('open-nav');
+    });
 
-//NEW
-// $(document).ready(function(){
-//     $('.mobile-toggle').click(function(){
-//         $('.mobile-toggle').toggleClass('open-nav');
-//     });
-// });
-//
-
-$('.main_h li a').click(function() {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.navigation').removeClass('open-nav');
-        $('.main_h').removeClass('open-nav');
-    }
-});
-
-// Navigation Scroll - ljepo radi materem
-$('nav a').click(function(event) {
-    var id = $(this).attr("href");
-    var offset = 70;
-    var target = $(id).offset().top - offset;
-    $('html, body').animate({
-        scrollTop: target
-    }, 500);
-    event.preventDefault();
+    // Navigation Scroll
+    // $('nav a').click(function (event) {
+    //     event.preventDefault();
+    //     var target = $($(this).attr("href")).offset().top - 70; // Adjust offset as needed
+    //     $('html, body').animate({ scrollTop: target }, 500);
+    // });
 });
