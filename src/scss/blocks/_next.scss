@@ -3,22 +3,12 @@
 }
 
 .events__container {
-  display: inline-flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.event__link {
-  text-decoration: none;
-  color: black;
-}
-
 .flex__container {
-  display: flex;
-  justify-content: flex-start;
-  background: #fff;
-  //border: 1px outset #b1b1b1;
-  align-items: center;
+  background-color: white;
   height: 100px;
   width: 700px;
 }
@@ -103,11 +93,12 @@
 }
 
 a.event__link {
+  background-color: yellow;
   transition: 0s;
 }
 
 a.event__link:hover,
 a.event__link:focus {
-  background-color: #6681A9;
-  color: #fff;
+  background-color: #000000;
+  color: red;
 }

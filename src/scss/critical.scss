@@ -3,7 +3,6 @@
 @use 'blocks/intro';
 @use 'blocks/next';
 @use 'blocks/footer';
-@use 'utilities/cursor';
 @use 'utilities/wrapper';
 
 
@@ -15,7 +14,6 @@
 body {
   background-color: #C5D3E8;
   color: #263147;
-  line-height: 1.5;
   font-size: 1.33rem;
   font-family: "Jost", serif;
   font-optical-sizing: auto;
@@ -23,36 +21,13 @@ body {
   font-style: normal;
 }
 
-a:not([class]) {
-  color: currentColor;
-  text-decoration: none;
-
-}
-
-:focus {
-  outline: 2px dashed #513aa6;
-  outline-offset: 0.25rem;
-}
-
-main:focus {
-  outline: none;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.1;
-}
-
-// High contrast selection because it can help visually-impaired
-// folks read the text easier
+// selection styling
 ::selection {
-  color: #f9f4e3;
-  background: rgba(38, 49, 71, .99)
+  color: yellow;
+  background: red
 }
 
-// Scrollbar styles
+// scrollbar styling
 ::-webkit-scrollbar {
   height: 1rem;
 }
