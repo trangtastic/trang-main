@@ -1,8 +1,13 @@
-<header>
-    <div class="wrapper">
-        <nav class="[ nav ] [ font-sans ]" aria-label="Primary">
-            <a href="/" aria-label="{{ site.name }} - home">{{ site.name }}</a>
-            <ul class="nav__list">
+<header class="main_h sticky">
+    <div class="nav__row">
+        <a class="logo" href="/">Trang Dông</a>
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
                 {% for item in navigation.items %}
                 <li>
                     <a href="{{ item.url | url }}"
@@ -17,23 +22,22 @@
     </div>
 </header>
 
+<!--<a>-->
+<!--    <div>-->
+<!--        <span>Trang Dông</span>-->
+<!--    </div>-->
+<!--</a>-->
+<!--<nav class="[ nav ] [ font-sans ]" aria-label="Primary">-->
 
-<!-- <header role="banner" class="site-head">
-    <div class="wrapper">
-        <div class="site-head__inner">
-                <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand"> Trang Dông
-                </a>
-            <nav class="[ nav ] [ site-head__nav ] [ font-sans ]" aria-label="Primary">
-                <ul class="nav__list">
-                    {% for item in navigation.items %}
-                    <li>
-                        <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-                        >{{ item.text }}</a
-                        >
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header> -->
+<!--    <ul class="nav__list">-->
+<!--        {% for item in navigation.items %}-->
+<!--        <li>-->
+<!--            <a href="{{ item.url | url }}"-->
+<!--               {% if item.newTab %} target="_blank" rel="noopener noreferrer" {% endif %}-->
+<!--               {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>-->
+<!--                {{ item.text }}-->
+<!--            </a>-->
+<!--        </li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</nav>-->

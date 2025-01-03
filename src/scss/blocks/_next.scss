@@ -5,12 +5,12 @@
 .events__container {
   flex-direction: column;
   gap: 15px;
-}
 
-.flex__container {
-  background-color: white;
-  height: 100px;
-  width: 700px;
+  .flex__container {
+    background-color: white;
+    height: 100px;
+    width: 700px;
+  }
 }
 
 .event__date {
@@ -47,7 +47,7 @@
   }
 }
 
-.event__image, img, .slides__block{
+.event__image, .slides > img, .slides__block{
   display: flex;
   height: 100%;
   margin-left: auto;
