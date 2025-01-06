@@ -1,9 +1,11 @@
 .footer {
-  background-color: #89A8B2;
-  color: #f9f4e3;
+  background-color: yellow;
+  color: blue;
   font-size: 14px;
+  text-align: left;
+  padding: 20px;
 }
 
 .footer__list li a:hover{
-  color: #FAFFC5;
+  color: black;
 }

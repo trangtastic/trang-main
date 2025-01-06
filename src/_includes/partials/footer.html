@@ -1,19 +1,16 @@
-<article class="footer">
+<footer class="footer">
     <div class="wrapper">
-        <div>
-            <p>Write me:</p>
-            <br>
-            <nav>
-                <ul class="footer__list">
-                    {% for item in footer.items %}
-                    <li>
-                        <a href="{{ item.url }}" target="_blank">
-                            ➔ {{ item.text }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
+        <div class="footer__content">
+            <p>Say hi 👋</p>
+            <ul class="footer__list">
+                {% for item in footer.items %}
+                <li class="footer__item">
+                    <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                        ➔ {{ item.text }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
-</article>
+</footer>

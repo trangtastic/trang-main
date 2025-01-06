@@ -1,6 +1,6 @@
 ---
-title: 'Intro'
-layout: 'layouts/intro.html'
-namespace: 'intro'
+title: 'Index'
+layout: 'layouts/index.html'
+namespace: 'index'
 ---
 index.md...
