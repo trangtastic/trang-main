@@ -13,8 +13,16 @@ body {
 
 /* #Cursor
 ================================================== */
+@media (max-width: 768px) {
+  .cursor,
+  .cursor2,
+  .cursor3 {
+    display: none !important;
+  }
+}
+
 .disable-cursor {
-  display: none;
+  display: none !important;
 }
 
 .cursor,
