@@ -1,12 +1,17 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<h1>Photos</h1>
-<div>
-    {% for image in collections.photosList %}
-    <!-- <img src="/images/photos/{{ image }}" alt="Photo {{ loop.index }}"> -->
-    <img src="{{ '/images/photos/' | url }}{{ image }}" alt="Image description">
-    {% endfor %}
+<div data-barba="wrapper" class="photoswrapper">
+    <div data-barba="container" data-barba-namespace="{{ namespace }}" class="photos">
+        <h1>Photos</h1>
+        <div>
+            {% for image in collections.photosList %}
+            <img src="{{ '/images/photos/' | url }}{{ image }}" alt="Image description">
+            {% endfor %}
+        </div>
+        {% include "partials/footer.html" %}
+    </div>
 </div>
+
 
 {% endblock %}

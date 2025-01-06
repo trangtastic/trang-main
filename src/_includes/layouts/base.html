@@ -28,26 +28,23 @@
 </head>
 
 <body>
-
-{% include "partials/navigation.html" %}
-
+    {% include "partials/navigation.html" %}
     {% block content %}
     {% endblock %}
-<!-- Page cursor
-================================================== -->
 
-<div class='cursor' id="cursor"></div>
-<div class='cursor2' id="cursor2"></div>
-<div class='cursor3' id="cursor3"></div>
+    <!-- Page cursor -->
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
-<script src="{{ '/js/nav.js' | url }}" defer></script>
-<script src="{{ '/js/shuffle.js' | url }}" defer></script>
-<script src="{{ '/js/video.js' | url }}" defer></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <script src="{{ '/js/nav.js' | url }}" defer></script>
+    <script src="{{ '/js/shuffle.js' | url }}" defer></script>
+    <script src="{{ '/js/video.js' | url }}" defer></script>
 </body>
 </html>

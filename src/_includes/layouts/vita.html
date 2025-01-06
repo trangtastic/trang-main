@@ -3,57 +3,94 @@
 {% set pageHeaderTitle = title %}
 
 {% block content %}
-<div>
-    <div>
-        <h1 data-highlight="primary">
-            {{ pageHeaderTitle }}
-        </h1>
+<div data-barba="wrapper" class="vitawrapper">
+    <div data-barba="container" data-barba-namespace="{{ namespace }}" class="vita">
+        <div>
+            <h1>
+                {{ pageHeaderTitle }}
+            </h1>
 
-        <h2> {{vita.persona.title}} </h2>
-        <ul>
-            {% for item in vita.persona.items %}
-            <li>
-                <strong>{{ item.title }}</strong> {{ item.property }}
-            </li>
-            {% endfor %}
-        </ul>
+            <h2> {{vita.persona.title}} </h2>
+            <ul>
+                {% for item in vita.persona.items %}
+                <li>
+                    <strong>{{ item.title }}</strong> {{ item.property }}
+                </li>
+                {% endfor %}
+            </ul>
 
-        <h2>{{vita.film.title}}</h2>
-        <ul>
-            {% for item in vita.film.items %}
-            <li>
-                <a href="{{ item.url }}" target="_blank">
-                    <span>{{ item.year }}</span>
-                    <span>{{ item.production }}</span>
-                    <span>{{ item.company }}</span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+            <h2>{{vita.film.title}}</h2>
+            <ul>
+                {% for item in vita.film.items %}
+                <li>
+                    <a href="{{ item.url }}" target="_blank">
+                        <span>{{ item.year }}</span>
+                        <span>{{ item.production }}</span>
+                        <span>{{ item.company }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
 
-        <h2>{{vita.stage.title}}</h2>
-        <ul>
-            {% for item in vita.stage.items %}
-            <li>
-                <a href="{{ item.url }}" target="_blank">
-                    <span>{{ item.year }}</span>
-                    <span>{{ item.production }}</span>
-                    <span>{{ item.company }}</span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+            <h2>{{vita.stage.title}}</h2>
+            <ul>
+                {% for item in vita.stage.items %}
+                <li>
+                    <a href="{{ item.url }}" target="_blank">
+                        <span>{{ item.year }}</span>
+                        <span>{{ item.production }}</span>
+                        <span>{{ item.company }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nulla a eros facilisis, ac scelerisque odio luctus. Integer non pharetra ante, in pretium purus. Nunc dictum nibh sed tortor tempor, ac faucibus ligula euismod. Ut venenatis massa nec augue placerat, at dapibus sapien consectetur. Sed vel volutpat felis. Nullam nec risus convallis, mollis magna et, volutpat purus. Integer venenatis neque sed nulla viverra, at porttitor neque tempor. Cras sit amet mi ligula. Quisque ac sapien at dui egestas lacinia at ac nulla.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor nulla a eros facilisis, ac
+                scelerisque
+                odio luctus. Integer non pharetra ante, in pretium purus. Nunc dictum nibh sed tortor tempor, ac
+                faucibus
+                ligula euismod. Ut venenatis massa nec augue placerat, at dapibus sapien consectetur. Sed vel volutpat
+                felis. Nullam nec risus convallis, mollis magna et, volutpat purus. Integer venenatis neque sed nulla
+                viverra, at porttitor neque tempor. Cras sit amet mi ligula. Quisque ac sapien at dui egestas lacinia at
+                ac
+                nulla.
 
-            Maecenas interdum dui sed suscipit fringilla. Suspendisse potenti. Nullam pretium diam libero, non varius nunc sollicitudin ut. Nam venenatis ex sit amet sapien varius, ac volutpat felis tincidunt. Vivamus dapibus leo eget risus hendrerit dictum. Cras ac tortor ac enim auctor sollicitudin. Fusce laoreet lobortis diam id sodales. Pellentesque auctor urna quis ante tempor iaculis. Mauris ultricies elit eget ligula feugiat, sit amet feugiat neque faucibus.
+                Maecenas interdum dui sed suscipit fringilla. Suspendisse potenti. Nullam pretium diam libero, non
+                varius
+                nunc sollicitudin ut. Nam venenatis ex sit amet sapien varius, ac volutpat felis tincidunt. Vivamus
+                dapibus
+                leo eget risus hendrerit dictum. Cras ac tortor ac enim auctor sollicitudin. Fusce laoreet lobortis diam
+                id
+                sodales. Pellentesque auctor urna quis ante tempor iaculis. Mauris ultricies elit eget ligula feugiat,
+                sit
+                amet feugiat neque faucibus.
 
-            Aenean scelerisque, lorem non fermentum varius, velit mi sodales sapien, at varius metus nisl et justo. Aliquam erat volutpat. Nam egestas malesuada nunc, nec dapibus erat volutpat eget. Donec tempor libero sed magna dictum, et vestibulum libero viverra. Curabitur vitae rhoncus odio. Aliquam eget bibendum metus. Phasellus quis ex at ante eleifend cursus. Vivamus suscipit, ipsum at fermentum porttitor, urna augue tristique justo, nec placerat enim felis ac metus. Aenean id libero ut leo tincidunt dictum.
+                Aenean scelerisque, lorem non fermentum varius, velit mi sodales sapien, at varius metus nisl et justo.
+                Aliquam erat volutpat. Nam egestas malesuada nunc, nec dapibus erat volutpat eget. Donec tempor libero
+                sed
+                magna dictum, et vestibulum libero viverra. Curabitur vitae rhoncus odio. Aliquam eget bibendum metus.
+                Phasellus quis ex at ante eleifend cursus. Vivamus suscipit, ipsum at fermentum porttitor, urna augue
+                tristique justo, nec placerat enim felis ac metus. Aenean id libero ut leo tincidunt dictum.
 
-            Mauris suscipit orci vitae augue aliquam, non rutrum est tincidunt. Quisque ut libero libero. Etiam vel nunc ante. Fusce vel dictum turpis. Vestibulum et augue eu enim scelerisque condimentum. Suspendisse potenti. Pellentesque maximus, magna non interdum vestibulum, velit metus egestas nunc, ac volutpat nunc neque a tortor. Ut vel ante sit amet metus porttitor tincidunt. Donec sodales fermentum mi, vitae lobortis justo fermentum sit amet. Phasellus ornare, dui sed dictum dapibus, elit purus viverra eros, et convallis libero felis ut libero.
+                Mauris suscipit orci vitae augue aliquam, non rutrum est tincidunt. Quisque ut libero libero. Etiam vel
+                nunc
+                ante. Fusce vel dictum turpis. Vestibulum et augue eu enim scelerisque condimentum. Suspendisse potenti.
+                Pellentesque maximus, magna non interdum vestibulum, velit metus egestas nunc, ac volutpat nunc neque a
+                tortor. Ut vel ante sit amet metus porttitor tincidunt. Donec sodales fermentum mi, vitae lobortis justo
+                fermentum sit amet. Phasellus ornare, dui sed dictum dapibus, elit purus viverra eros, et convallis
+                libero
+                felis ut libero.
 
-            Integer auctor ipsum vel ipsum auctor, non cursus lorem egestas. Nulla sed magna quis velit auctor aliquam. In ut dictum sapien. Curabitur sed ante viverra, pretium urna eget, aliquam magna. Donec nec enim sollicitudin, faucibus odio ac, vestibulum purus. Etiam ac orci convallis, dapibus erat vitae, egestas justo. Vivamus eu est in justo tincidunt feugiat id sit amet purus. Morbi sed tincidunt ligula. Aliquam placerat sem sit amet dolor congue maximus.
-        </p>
+                Integer auctor ipsum vel ipsum auctor, non cursus lorem egestas. Nulla sed magna quis velit auctor
+                aliquam.
+                In ut dictum sapien. Curabitur sed ante viverra, pretium urna eget, aliquam magna. Donec nec enim
+                sollicitudin, faucibus odio ac, vestibulum purus. Etiam ac orci convallis, dapibus erat vitae, egestas
+                justo. Vivamus eu est in justo tincidunt feugiat id sit amet purus. Morbi sed tincidunt ligula. Aliquam
+                placerat sem sit amet dolor congue maximus.
+            </p>
+        </div>
+        {% include "partials/footer.html" %}
     </div>
 </div>
+
 {% endblock %}

@@ -43,3 +43,8 @@ body {
   background-color: #38445b;
   border-radius: 0.25rem;
 }
+
+[data-barba="container"] {
+  position: absolute;
+  width: 100%;
+}
