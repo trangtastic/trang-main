@@ -69,3 +69,8 @@
 
 })(jQuery);
 
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+console.log(isTouchDevice);
+if (isTouchDevice) {
+    document.body.classList.add('disable-cursor');
+}
