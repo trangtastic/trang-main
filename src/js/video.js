@@ -65,12 +65,13 @@
             }
         });
 
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (isTouchDevice) {
+            const cursorElement = document.querySelector('.cursor');
+            if (cursorElement) {
+                cursorElement.classList.add('disable-cursor');
+            }
+        }
     });
 
 })(jQuery);
-
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-console.log(isTouchDevice);
-if (isTouchDevice) {
-    document.body.classList.add('disable-cursor');
-}
