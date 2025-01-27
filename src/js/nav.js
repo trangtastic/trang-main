@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const currentUrl = window.location.href;
+    let currentUrl = window.location.href;
     const linkUrl = $('.logo').attr('href');
     const resolvedLinkUrl = new URL(linkUrl, window.location.origin).href;
     const isSamePage = currentUrl === resolvedLinkUrl;
@@ -25,19 +25,34 @@ $(document).ready(function () {
         $(this).toggleClass('open-nav');
     });
 
-    $('.main_h li a').click(function () {
-        $('.main_h').removeClass('open-wide');
-        $('.mobile-toggle').removeClass('open-nav');
-    });
-
-    $('.logo').click(function (event) {
-        if (isSamePage){
-            event.preventDefault();
-        }
-
+    function closeNavigation() {
         if ($('.main_h').hasClass('open-wide')) {
             $('.main_h').removeClass('open-wide');
             $('.mobile-toggle').removeClass('open-nav');
         }
+    }
+
+    $('.logo').click(function (event) {
+        currentUrl = window.location.href;
+        if (isSamePage){
+            event.preventDefault();
+        }
+        closeNavigation()
+    });
+
+    $('.Photos').click(function (event) {
+        currentUrl = window.location.href;
+        if (currentUrl.includes("photos")) {
+            event.preventDefault();
+        }
+        closeNavigation()
+    });
+
+    $('.Vita').click(function (event) {
+        currentUrl = window.location.href;
+        if (currentUrl.includes("vita")) {
+            event.preventDefault();
+        }
+        closeNavigation()
     });
 });
