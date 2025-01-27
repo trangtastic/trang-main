@@ -1,12 +1,53 @@
-.dummy__slidecase {
-  background-repeat: no-repeat;
-  display: none;
+.dummys_container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.dummy__date {
-  background-color: yellow;
+.row {
+  img {
+    width: 100%;
+  }
+
+  .date > div {
+    display: flex; /* Makes each line a flex container */
+    justify-content: space-between; /* Distributes characters evenly */
+  }
+
+  .date > div {
+    letter-spacing: 0; /* Reset letter-spacing if needed */
+  }
+
+  .date > div span {
+    flex: 1; /* Each character takes equal space */
+    text-align: center; /* Align characters in the center of their space */
+  }
 }
 
-.dummy__details {
-  background-color: green;
+.stacked-layout {
+  position: relative;
+  height: 300px;
+
+  .background-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foreground-child {
+    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 2;
+    margin: 10px auto;
+    max-width: 80%;
+    color: white;
+  }
 }
