@@ -1,11 +1,11 @@
-<article class="dummys">
+<article class="next">
         <p> {{ next.title }} </p>
     <br>
 
-    <div class="dummys_container">
+    <div class="next_container">
     <!-- Row -->
     {% for item in next.items %}
-    <a class="[ dummy_link ] [ row mx-auto align-items-center mb-2 d-none d-md-flex ]" href="{{ item.url }}" target="_blank"
+    <a class="[ next_link ] [ row mx-auto align-items-center mb-2 d-none d-md-flex ]" href="{{ item.url }}" target="_blank"
        title="{{ item.production }}">
         <div class="[ date ] [ col-md-1 ]">
             <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>
@@ -13,28 +13,28 @@
             <div class="date">{{ dateParts[0] }}.{{ dateParts[1] }}</div>
             <div class="year">{{ dateParts[2] }}</div>
         </div>
-        <div class="[ dummy_details ] [ col-md-7 text-start ]">
-            <div class="dummy_production">{{ item.production }}</div>
-            <div class="dummy_location">{{ item.location }}</div>
+        <div class="[ next_details ] [ col-md-7 text-start ]">
+            <div class="next_production">{{ item.production }}</div>
+            <div class="next_location">{{ item.location }}</div>
         </div>
-        <div class="[ dummy_image] [ col-md-4 ]">
+        <div class="[ next_image] [ col-md-4 ]">
             <img src="{{ 'images/events/' + item.image | safe }}" alt="{{ item.production }}">
         </div>
     </a>
     {% endfor %}
 
     <!-- Card -->
-    {% for item in dummy.items %}
-    <a class="[ dummy_link ] [ stacked-layout d-block d-md-none ]" href="{{ item.url }}" target="_blank"
+    {% for item in next.items %}
+    <a class="[ next_link ] [ stacked-layout d-block d-md-none ]" href="{{ item.url }}" target="_blank"
        title="{{ item.production }}">
-        <div class="[ dummy_date ] [ foreground-child ]">
+        <div class="[ next_date ] [ foreground-child ]">
             {{ helpers.getWeekday(item.date) }} , {{item.date}}
         </div>
-        <div class="[ dummy_details ] [ foreground-child ]">
-            <div class="dummy_production">{{ item.production }}</div>
-            <div class="dummy_location">{{ item.location }}</div>
+        <div class="[ next_details ] [ foreground-child ]">
+            <div class="next_production">{{ item.production }}</div>
+            <div class="next_location">{{ item.location }}</div>
         </div>
-        <div class="[ dummy_image] [ background-child ]">
+        <div class="[ next_image] [ background-child ]">
             <img src="{{ 'images/events/' + item.image | safe }}" alt="{{ item.production }}">
         </div>
     </a>
