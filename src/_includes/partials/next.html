@@ -1,10 +1,10 @@
 <article class="dummys">
-        <p> {{ dummy.title }} </p>
+        <p> {{ next.title }} </p>
     <br>
 
     <div class="dummys_container">
     <!-- Row -->
-    {% for item in dummy.items %}
+    {% for item in next.items %}
     <a class="[ dummy_link ] [ row mx-auto align-items-center mb-2 d-none d-md-flex ]" href="{{ item.url }}" target="_blank"
        title="{{ item.production }}">
         <div class="[ date ] [ col-md-1 ]">
