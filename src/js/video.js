@@ -37,6 +37,7 @@
     $('.video-section').on('mouseout', function(event) {
         $('body').removeClass('video-cursor');
     });
+
     $('.link-to-portfolio').on('mouseover', function(event) {
         $('body').addClass('logo-cursor');
     });
@@ -66,12 +67,22 @@
         });
 
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const cursorElement = document.querySelector('.cursor');
         if (isTouchDevice) {
-            const cursorElement = document.querySelector('.cursor');
             if (cursorElement) {
                 cursorElement.classList.add('disable-cursor');
             }
         }
+
+        $(document).mouseleave(function () {
+            cursorElement.classList.add('disable-cursor');
+        });
+
+        $(document).mouseenter(function () {
+            cursorElement.classList.remove('disable-cursor');
+        });
+
+
     });
 
 })(jQuery);

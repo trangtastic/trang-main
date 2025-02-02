@@ -2,6 +2,7 @@
 @use 'blocks/nav';
 @use 'blocks/intro';
 @use 'blocks/next';
+@use 'blocks/photos';
 @use 'blocks/footer';
 @use 'utilities/wrapper';
 
@@ -23,26 +24,11 @@ body {
 
 // selection styling
 ::selection {
-  color: yellow;
-  background: red
+  color: #c5d3e8;
+  background: #263147;
 }
 
-// scrollbar styling
-::-webkit-scrollbar {
-  height: 1rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: 1px solid #505c73;
-  border-radius: 0.25rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #38445b;
-  border-radius: 0.25rem;
-}
-
+// barba-specifics
 [data-barba="container"] {
   position: absolute;
   width: 100%;

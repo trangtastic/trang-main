@@ -1,0 +1,117 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- grid ---- */
+.grid {
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+.grid-item {
+  float: left;
+  overflow: hidden;
+}
+
+.grid-item {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.grid.masonry-loaded .grid-item {
+  opacity: 1;
+}
+
+/* ---- Full-Screen Carousel ---- */
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+.modal-content {
+  height: 100%;
+  border: none; /* Remove modal borders for a seamless full-screen look */
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.modal-backdrop.show {
+  background-color: white;
+  opacity: 0.9;
+}
+
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100vw;
+  height: 90vh;
+  object-fit: contain; /* Ensure images fit within the screen without cropping */
+}
+
+.carousel, .modal-body {
+  height: 100%;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+#imageCarouselModal{
+  padding-right: 0 !important;
+}
+
+#carouselExampleIndicators {
+  padding: 15px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 0;
+  z-index: 1050; /* Ensures it's above other elements */
+  padding: 15px;
+  width: 43px;
+  height: 43px;
+}
+
+.modal-close-button, .modal-close-button:hover {
+ opacity: 1;
+}
+
+.modal-close-button:focus {
+ box-shadow: unset;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 50%
+}
+
+.carousel-inner {
+  position: static !important;
+}
+
+.carousel-item {
+ top: 7vh;
+}
+
+// Override settings coming from framework
+body, .photos {
+  overflow: inherit !important;
+  padding-right: inherit  !important;
+}
+
+
