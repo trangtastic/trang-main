@@ -131,21 +131,33 @@ $(document).ready(function () {
             ];
 
             buttons.forEach(({ element, className }) => {
-                if (element.length) { // Check if it's a NodeList (like from querySelectorAll)
+                if (element instanceof NodeList) {
                     element.forEach(el => {
-                        el.addEventListener("mouseenter", () => cursor.classList.add(className));
-                        el.addEventListener("mouseleave", () => cursor.classList.remove(className));
+                        el.addEventListener("mouseenter", () => {
+                            cursor.classList.add(className);
+                            document.body.style.cursor = "none";
+                        });
+                        el.addEventListener("mouseleave", () => {
+                            cursor.classList.remove(className);
+                            document.body.style.cursor = "auto";
+                        });
                     });
-                } else if (element) { // Fallback for single element (like carousel buttons)
-                    element.addEventListener("mouseenter", () => cursor.classList.add(className));
-                    element.addEventListener("mouseleave", () => cursor.classList.remove(className));
+                } else if (element instanceof HTMLElement) {
+                    element.addEventListener("mouseenter", () => {
+                        cursor.classList.add(className);
+                        document.body.style.cursor = "none";
+                    });
+                    element.addEventListener("mouseleave", () => {
+                        cursor.classList.remove(className);
+                        document.body.style.cursor = "auto";
+                    });
                 }
             });
 
 
+
         }
 
-        // Modal and image click functionality
         const images = document.querySelectorAll(".clickable-image");
         const modal = document.getElementById("imageCarouselModal");
 
@@ -177,17 +189,6 @@ $(document).ready(function () {
         if (vitaNav) {
             vitaNav.style.color = 'black';
         }
-
-        const vitaContent = document.querySelector('.vita-content');
-        const cursor = document.querySelector('.cursor');
-
-        vitaContent.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor-text');
-        });
-
-        vitaContent.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor-text');
-        });
     }
 
     function initializeIntroPage() {

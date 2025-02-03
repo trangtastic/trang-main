@@ -4,7 +4,6 @@
 
 
 body {
-  cursor: none;
 /*  width: 100%;
   display: block;
   overflow: hidden;
@@ -30,14 +29,6 @@ body {
 }
 
 .cursor {
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23000000" height="800" width="800" viewBox="0 0 502.158 502.158"%3E%3Cpath d="M397.479 240.158l-288-239.2c-1.2-1.2-2.8-1.2-4.4-.4s-2 2.4-2 4l49.6 368.8c0 1.2.8 2.4 2 2.8a5.55 5.55 0 0 0 3.6 0l94.4-51.2 91.2 175.2c.4.8 1.2 1.6 2.4 2h1.2c.8 0 1.2 0 2-.4l44-24c.8-.4 1.6-1.2 2-2.4s0-2-.4-3.2l-97.2-172 99.2-54c1.2-.8 2-1.6 2-3.2 0-.4-.4-2-1.6-2.8z"/%3E%3C/svg%3E');
-  width: 25px;
-  height: 34px;
-  background-size: 18px 18px;
-  background-repeat: no-repeat;
-  background-color: unset;
-  box-shadow: unset;
-  background-position: 8px 14px;
   z-index: 9999;
 }
 
@@ -85,18 +76,9 @@ body {
   background-position: unset;
 }
 
-.cursor-text {
-  width: 24px;
-  height: 24px;
-  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22800%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22%23000000%22%20xmlns%3Av%3D%22https%3A%2F%2Fvecta.io%2Fnano%22%3E%3Cpath%20d%3D%22M5%202a.5.5%201%200%201%20.5-.5c.862%200%201.573.287%202.06.566.174.099.321.198.44.286.119-.088.266-.187.44-.286A4.165%204.165%200%200%201%2010.5%201.5a.5.5%200%200%201%200%201c-.638%200-1.177.213-1.564.434a3.49%203.49%200%200%200-.436.294V7.5H9a.5.5%200%200%201%200%201h-.5v4.272c.1.08.248.187.436.294.387.221.926.434%201.564.434a.5.5%200%200%201%200%201%204.165%204.165%200%200%201-2.06-.566A4.561%204.561%200%200%201%208%2013.65a4.561%204.561%200%200%201-.44.285%204.165%204.165%200%200%201-2.06.566.5.5%200%200%201%200-1c.638%200%201.177-.213%201.564-.434.188-.107.335-.214.436-.294V8.5H7a.5.5%200%200%201%200-1h.5V3.228a3.49%203.49%200%200%200-.436-.294A3.166%203.166%200%200%200%205.5%202.5.5.5%200%200%201%205%202zm3.352%201.355zm-.704%209.29z%22%2F%3E%3C%2Fsvg%3E');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: unset;
-  box-shadow: unset;
-  background-position: unset;
-}
 
-a, .carousel-control-next, .carousel-control-prev, .modal-close-button {
+
+.carousel-control-next, .carousel-control-prev, .modal-close-button {
   cursor: none !important;
 }
 
@@ -135,7 +117,6 @@ a, .carousel-control-next, .carousel-control-prev, .modal-close-button {
   transform: scale(2.2) translateX(-25%) translateY(-25%);
   border: none;
   opacity: 1;
-  background-color: yellow;
 }
 
 .section {
