@@ -75,7 +75,7 @@ $(document).ready(function () {
     function initializePhotoPage() {
         const photosNav = document.querySelector('nav .Photos');
         if (photosNav) {
-            photosNav.style.color = 'black';
+            photosNav.style.color = 'blue';
         }
 
         const vitaNav = document.querySelector('nav .Vita');
@@ -187,7 +187,7 @@ $(document).ready(function () {
 
         const vitaNav = document.querySelector('nav .Vita');
         if (vitaNav) {
-            vitaNav.style.color = 'black';
+            vitaNav.style.color = 'blue';
         }
     }
 

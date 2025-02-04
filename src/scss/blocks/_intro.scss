@@ -124,32 +124,9 @@ body {
   width: 100%;
   display: block;
   overflow: hidden;
-  height: 100vh;
+  height: 66vh;
 }
 
-.blur-img {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 8;
-  display: block;
-  background-size: cover;
-  background-position: center;
-  background-image: url("https://placehold.co/1920x1080/89CFF0/white");
-  filter: blur(6px);
-}
-
-.blur-img-over {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #060606;
-  z-index: 9;
-  display: block;
-}
 
 /* Video
 ================================================== */
@@ -180,7 +157,6 @@ body {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.45);
 }
 
 .video-wrapper, figure.vimeo, figure.youtube {
@@ -211,23 +187,25 @@ figure.youtube a img, figure.vimeo a img {
 
 figure.vimeo a:after, figure.youtube a:after {
   content: "";
-  width: 60px;
-  height: 60px;
+  width: 30%;
+  height: 30%;
   z-index: 9;
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin: -30px 0 0 -30px;
-  border-radius: 50%;
-  background-image: url('http://www.ivang-design.com/svg-load/play.png');
+  left: 55%;
+  transform: translate(-50%, -50%);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="345.6" height="345.6" viewBox="0 0 9144 9144"><path d="M2455 2367h4234c48 0 88 40 88 88v4234c0 48-40 88-88 88H2455c-48 0-88-40-88-88V2455c0-48 40-88 88-88zm3112 2282l-1693 952c-42 24-96 9-120-34-7-13-11-28-11-43V3619c0-48 39-88 88-88 18 0 34 5 47 14l1689 950c43 24 58 78 34 120-8 15-20 27-34 34zm-1648 725l1426-802-1426-802v1604zm2681-2830H2544v4056h4056V2544z" fill="%23fff"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M1 14h2l6-6-6-6H1v12zM15 2h-2v12h2V2z'/%3E%3Cpath d='M9 2h2v12H9V2z'/%3E%3C/svg%3E") 8 8, pointer;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
+  opacity: 0.3;
 }
 
 
 figure.vimeo:hover a:after, figure.youtube:hover a:after {
-  opacity: 0;
+  //opacity: 0;
 }
 
 figure.vimeo a:before, figure.youtube a:before {
