@@ -1,3 +1,15 @@
+@mixin small {
+  @media only screen and (max-width: 766px) {
+    @content;
+  }
+}
+
+@mixin tiny {
+  @media only screen and (max-width: 477px) {
+    @content;
+  }
+}
+
 section.next {
   margin-top: 11vh;
 }
@@ -13,7 +25,7 @@ section.next {
 }
 
 .next_container {
-  max-width: 80vh;
+  max-width: 80vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10vh;
@@ -24,9 +36,9 @@ section.next {
 
 
 &.row.next_link {
-  margin-bottom: 3vh !important;
   border: 2px solid black;
   background-color: cornflowerblue;
+  margin: 0 5vh 3vh !important;
   //outline: 3px dashed blue;
   //outline-offset: 5px;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
@@ -80,15 +92,23 @@ section.next {
 
 .stacked-layout {
   position: relative;
-  height: 400px;
-  margin-bottom: 5vh;
+  width: 80vw;
+  min-height: calc(80vw * 0.66666667);
+  margin: 0 auto 2vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   overflow: hidden;
 
   svg {
     width: 20px;
+  }
+
+  .next_image {
+    width: 50vw;
+    height: auto;
+    margin: 0 auto;
   }
 
   .background-child {
@@ -98,26 +118,33 @@ section.next {
     width: 100%;
     height: 100%;
     z-index: 1;
-  }
 
-  .background-child img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    border-radius: 1% 99% 0% 100% / 100% 1% 99% 0%;
+    }
 
-  .background-child::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    //background: linear-gradient(0deg, rgba(109,109,109,1) 0%, rgba(255,255,255,0.27) 37%);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 31%);
-
-
-    z-index: 2;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 31%);
+      border: 1px solid black;
+      //border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+      border-radius: 1% 99% 0% 100% / 100% 1% 99% 0%;
+      z-index: 2;
+      @include small {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 49%);
+      }
+      @include tiny {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 68%);
+      }
+    }
   }
 
   .foreground-child {
@@ -134,7 +161,10 @@ section.next {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 4vh 5vh;
+    padding: 4vh 3vh;
+    @include small {
+      padding: 2vh 2vh;
+    }
   }
 
   .next_details {
@@ -145,15 +175,33 @@ section.next {
     text-transform: uppercase;
     font-weight: 500;
     font-size: xx-large;
+    @include small {
+
+    }
+    @include tiny {
+      font-size: x-large;
+    }
   }
 
   .next_location {
     font-weight: 300;
+    @include small {
+
+    }
+    @include tiny {
+      font-size: small
+    }
   }
 
   .next_date {
     display: flex;
     align-items: center;
+    @include small {
+
+    }
+    @include tiny {
+      font-size: large;
+    }
   }
 
   .weekday {
@@ -166,15 +214,11 @@ section.next {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 1.5vh;
-  }
-
-  .date {
 
   }
 
   .year {
     text-decoration: overline;
   }
-
 }
 
