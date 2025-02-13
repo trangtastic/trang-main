@@ -1,5 +1,5 @@
 ---
-title: 'VITA.md'
+title: 'VITA'
 layout: 'layouts/vita.html'
 namespace: 'vita'
 ---

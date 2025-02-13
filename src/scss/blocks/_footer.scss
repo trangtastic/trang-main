@@ -1,11 +1,41 @@
 .footer {
-  background-color: #101010;
+  margin-top: 15vh;
+  padding-top: 5vh;
   color: white;
-  font-size: 14px;
-  text-align: left;
-  padding: 20px;
+  font-size: large;
+  text-align: center;
+
+  .title {
+    font-size: xx-large;
+  }
+
+  svg {
+    width: 30px;
+  }
+
+  .footer__list{
+    margin-top: 2vh;
+  }
 }
 
-.footer__list li a:hover{
-  color: #ff1be8;
+.full-bg {
+  width: 100%;
+  height: auto;
+  min-height: 30vh;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="23 23 232 137" preserveAspectRatio="none"><use href="%23B" fill="%23101010"/><use href="%23B" fill="none" stroke="%23101010" stroke-width="5"/><defs ><path id="B" d="M254,26.1l-4,.1c-1.9.1-14.3,1-27.5,2v-.1c-53.6,4.1-98.8,4.6-139,1.5-21.2-1.7-40.6-2-51.8-.9l-6.7.6V157.72H254"/></defs></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.footer__list {
+  padding-left: 0;
+
+  .footer__item {
+    margin-top: 0.2vh;
+
+    a:hover{
+      color: yellow;
+    }
+  }
 }

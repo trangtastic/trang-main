@@ -1,14 +1,20 @@
+
+
 .intro {
   text-align: center;
 }
 
 
 body {
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 /*  width: 100%;
   display: block;
   overflow: hidden;
   height: 100vh;*/
 }
+
 
 /* #Cursor
 ================================================== */
@@ -32,9 +38,9 @@ body {
 }
 
 .cursor-arrow-right {
-  width: 18px;
-  height: 18px;
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><polygon fill="%23FFFFFF" points="11,15 17,9 11,3 11,7 4,7 4,11 11,11"/><polygon points="5,8 12,8 12,5.414 15.586,9 12,12.586 12,10 5,10"/></svg>');
+  width: 35px;
+  height: 35px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><polygon fill="%23FFFFFF" points="11,15 17,9 11,3 11,7 4,7 4,11 11,11"/><polygon points="5,8 12,8 12,5.414 15.586,9 12,12.586 12,10 5,10"/></svg>');
   background-size: contain;
   background-repeat: no-repeat;
   background-color: unset;
@@ -43,9 +49,9 @@ body {
 }
 
 .cursor-arrow-left {
-  width: 18px;
-  height: 18px;
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon points="1 9 6.999 15.001 7 11 14 11 14 7.004 7 7.002 7 3" fill="%23fff"/><polygon points="13 10 6 10 6 12.587 2.414 9 6 5.415 6 8.001 13 8.004"/></svg>');
+  width: 35px;
+  height: 35px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><polygon points="1 9 6.999 15.001 7 11 14 11 14 7.004 7 7.002 7 3" fill="%23fff"/><polygon points="13 10 6 10 6 12.587 2.414 9 6 5.415 6 8.001 13 8.004"/></svg>');
   background-size: contain;
   background-repeat: no-repeat;
   background-color: unset;
@@ -54,9 +60,9 @@ body {
 }
 
 .cursor-glass {
-  width: 24px;
-  height: 24px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path fill="%23231F20" d="M20.745,32.62c2.883,0,5.606-1.022,7.773-2.881L39.052,40.3c0.195,0.196,0.452,0.294,0.708,0.294 c0.255,0,0.511-0.097,0.706-0.292c0.391-0.39,0.392-1.023,0.002-1.414L29.925,28.319c3.947-4.714,3.717-11.773-0.705-16.205 c-2.264-2.27-5.274-3.52-8.476-3.52s-6.212,1.25-8.476,3.52c-4.671,4.683-4.671,12.304,0,16.987 C14.533,31.37,17.543,32.62,20.745,32.62z M13.685,13.526c1.886-1.891,4.393-2.932,7.06-2.932s5.174,1.041,7.06,2.932 c3.895,3.905,3.895,10.258,0,14.163c-1.886,1.891-4.393,2.932-7.06,2.932s-5.174-1.041-7.06-2.932 C9.791,23.784,9.791,17.431,13.685,13.526z"/></svg>');
+  width: 25px;
+  height: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='none' stroke='white' stroke-width='3' d='M20.745,32.62c2.883,0,5.606-1.022,7.773-2.881L39.052,40.3c0.195,0.196,0.452,0.294,0.708,0.294 c0.255,0,0.511-0.097,0.706-0.292c0.391-0.39,0.392-1.023,0.002-1.414L29.925,28.319c3.947-4.714,3.717-11.773-0.705-16.205 c-2.264-2.27-5.274-3.52-8.476-3.52s-6.212,1.25-8.476,3.52c-4.671,4.683-4.671,12.304,0,16.987 C14.533,31.37,17.543,32.62,20.745,32.62z M13.685,13.526c1.886-1.891,4.393-2.932,7.06-2.932s5.174,1.041,7.06,2.932 c3.895,3.905,3.895,10.258,0,14.163c-1.886,1.891-4.393,2.932-7.06,2.932s-5.174-1.041-7.06-2.932 C9.791,23.784,9.791,17.431,13.685,13.526z'/%3E%3Cpath fill='black' d='M20.745,32.62c2.883,0,5.606-1.022,7.773-2.881L39.052,40.3c0.195,0.196,0.452,0.294,0.708,0.294 c0.255,0,0.511-0.097,0.706-0.292c0.391-0.39,0.392-1.023,0.002-1.414L29.925,28.319c3.947-4.714,3.717-11.773-0.705-16.205 c-2.264-2.27-5.274-3.52-8.476-3.52s-6.212,1.25-8.476,3.52c-4.671,4.683-4.671,12.304,0,16.987 C14.533,31.37,17.543,32.62,20.745,32.62z M13.685,13.526c1.886-1.891,4.393-2.932,7.06-2.932s5.174,1.041,7.06,2.932 c3.895,3.905,3.895,10.258,0,14.163c-1.886,1.891-4.393,2.932-7.06,2.932s-5.174-1.041-7.06-2.932 C9.791,23.784,9.791,17.431,13.685,13.526z'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   background-color: unset;
@@ -65,9 +71,9 @@ body {
 }
 
 .cursor-close {
-  width: 24px;
-  height: 24px;
-  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%221%200%2017%2017%22%20version%3D%221.1%22%20xmlns:xlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20class%3D%22si-glyph%20si-glyph-close%22%3E%3Ctitle%3E1177%3C%2Ftitle%3E%3Cdefs%2F%3E%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate(1%2C%206)%22%20fill%3D%22%23434343%22%3E%3Cpath%20d%3D%22M1.053%2C4.938%20L1.053%2C4.032%20L1.948%2C4.032%20L1.948%2C4.938%20L1.053%2C4.938%20L1.053%2C4.938%20Z%20M0.048%2C3.932%20L0.048%2C1.037%20L0.953%2C1.037%20L0.953%2C3.932%20L0.048%2C3.932%20L0.048%2C3.932%20Z%20M1.053%2C0.938%20L1.053%2C0.032%20L1.948%2C0.032%20L1.948%2C0.938%20L1.053%2C0.938%20L1.053%2C0.938%20Z%22%20class%3D%22si-glyph-fill%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M7.021%2C4.979%20L7.021%2C4%20L8%2C4%20L8%2C4.979%20L7.021%2C4.979%20L7.021%2C4.979%20Z%20M8.037%2C3.941%20L8.037%2C1.037%20L8.942%2C1.037%20L8.942%2C3.941%20L8.037%2C3.941%20L8.037%2C3.941%20Z%20M6.059%2C3.941%20L6.059%2C1.037%20L6.932%2C1.037%20L6.932%2C3.941%20L6.059%2C3.941%20L6.059%2C3.941%20Z%20M7%2C0.973%20L7%2C0.001%20L7.951%2C0.001%20L7.951%2C0.973%20L7%2C0.973%20L7%2C0.973%20Z%22%20class%3D%22si-glyph-fill%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M3.059%2C4.931%20L3.059%2C0.059%20L3.942%2C0.059%20L3.942%2C4.048%20L4.973%2C4.048%20L4.973%2C4.932%20L3.059%2C4.931%20Z%22%20class%3D%22si-glyph-fill%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M14.058%2C4.947%20L14.058%2C0.042%20L15.958%2C0.042%20L15.958%2C0.947%20L14.918%2C0.947%20L14.918%2C2.1%20L15.979%2C2.1%20L15.979%2C2.947%20L14.94%2C2.947%20L14.94%2C4.053%20L15.958%2C4.053%20L15.958%2C4.947%20L14.058%2C4.947%20Z%22%20class%3D%22si-glyph-fill%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M10.079%2C4.916%20L10.079%2C4.084%20L11.942%2C4.084%20L11.942%2C4.916%20L10.079%2C4.916%20L10.079%2C4.916%20Z%20M12.007%2C3.947%20L12.007%2C3.026%20L12.943%2C3.026%20L12.943%2C3.947%20L12.007%2C3.947%20L12.007%2C3.947%20Z%20M11.031%2C2.964%20L11.031%2C2.021%20L11.963%2C2.021%20L11.963%2C2.964%20L11.031%2C2.964%20L11.031%2C2.964%20Z%20M10.037%2C1.958%20L10.037%2C1.026%20L10.963%2C1.026%20L10.963%2C1.958%20L10.037%2C1.958%20L10.037%2C1.958%20Z%20M11.079%2C0.916%20L11.079%2C0.068%20L12.942%2C0.068%20L12.942%2C0.916%20L11.079%2C0.916%20L11.079%2C0.916%20Z%22%20class%3D%22si-glyph-fill%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  width: 100px;
+  height: 50px;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"><text style="fill:%23333; font-family:Helvetica, sans-serif; font-size:30px; font-style:italic; text-transform:lowercase; white-space:pre;" y="39.257" x="12.306">schließen</text></svg>');
   background-size: contain;
   background-repeat: no-repeat;
   background-color: unset;
@@ -125,4 +131,35 @@ body {
 }
 
 
+/* NEW VIDEO start */
+
+$video-height: 70vh;
+
+.fullsize-video-bg {
+  height: $video-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 4vh;
+}
+
+#video-viewport {
+  position: relative;
+  width: 100vw;
+  height: $video-height;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+video {
+  height: $video-height;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* NEW VIDEO end */
 

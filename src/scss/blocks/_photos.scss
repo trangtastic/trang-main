@@ -1,3 +1,7 @@
+section.photos {
+  margin-top: 5vh;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -109,7 +113,7 @@ img {
 }
 
 // Override settings coming from framework
-body, .photos {
+body {
   overflow: inherit !important;
   padding-right: inherit  !important;
 }

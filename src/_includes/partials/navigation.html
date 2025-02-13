@@ -11,9 +11,10 @@
             <ul>
                 {% for item in navigation.items %}
                 <li>
-                    <a href="{{ item.url | url }}" class="{{ item.text }}"
+                    <a href="{{ item.url | url }}" class="{{ item.text }} link-active"
                        {% if item.newTab %} target="_blank" rel="noopener noreferrer" {% endif %}
                        {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+                        <span class="link-active-before"></span>
                         {{ item.text }}
                     </a>
                 </li>

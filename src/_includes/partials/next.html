@@ -1,19 +1,26 @@
-<article class="next">
-        <p> {{ next.title }} </p>
-    <br>
+<section class="next">
+        <p class="title"> {{ next.title }} </p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+        <path d="M7 20l5 7 5-7M12 2v23"/>
+    </svg>
+
+
 
     <div class="next_container">
     <!-- Row -->
     {% for item in next.items %}
     <a class="[ next_link ] [ row mx-auto align-items-center mb-2 d-none d-md-flex ]" href="{{ item.url }}" target="_blank"
-       title="{{ item.production }}">
-        <div class="[ date ] [ col-md-1 ]">
+       title="www.staatstheater-wiesbaden.de">
+        <div class="[ col-md-1 ]">
             <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>
+        </div>
+        <div class="[ date ] [ col-md-1 ]">
+
             {% set dateParts = item.date.split('.') %}
             <div class="date">{{ dateParts[0] }}.{{ dateParts[1] }}</div>
             <div class="year">{{ dateParts[2] }}</div>
         </div>
-        <div class="[ next_details ] [ col-md-7 text-start ]">
+        <div class="[ next_details ] [ col-md-6 ]">
             <div class="next_production">{{ item.production }}</div>
             <div class="next_location">{{ item.location }}</div>
         </div>
@@ -25,51 +32,39 @@
 
     <!-- Card -->
     {% for item in next.items %}
-    <a class="[ next_link ] [ stacked-layout d-block d-md-none ]" href="{{ item.url }}" target="_blank"
-       title="{{ item.production }}">
-        <div class="[ next_date ] [ foreground-child ]">
-            {{ helpers.getWeekday(item.date) }} , {{item.date}}
-        </div>
-        <div class="[ next_details ] [ foreground-child ]">
-            <div class="next_production">{{ item.production }}</div>
-            <div class="next_location">{{ item.location }}</div>
-        </div>
-        <div class="[ next_image] [ background-child ]">
-            <img src="{{ 'images/events/' + item.image | safe }}" alt="{{ item.production }}">
-        </div>
-    </a>
+        <a class="[ next_link ] [ stacked-layout d-block d-md-none ]" href="{{ item.url }}" target="_blank"
+           title="{{ item.production }}">
+            <div class="[ next_image] [ background-child ]">
+                <img src="{{ 'images/events/' + item.image | safe }}" alt="{{ item.production }}">
+            </div>
+            <div class="[ next_info ] [ foreground-child ]">
+                <div class="[ next_details ] ">
+                    <div class="next_production">{{ item.production }}</div>
+                    <div class="next_location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="16 5 64 64">
+                            <defs>
+                                <mask id="hole-mask">
+                                    <rect width="100%" height="100%" fill="white"/>
+                                    <circle cx="32" cy="24" r="8" fill="black"/>
+                                </mask>
+                            </defs>
+                            <path fill="#f76d57" d="M32 52.789l-12-18C18.5 32 16 28.031 16 24c0-8.836 7.164-16 16-16s16 7.164 16 16c0 4.031-2.055 8-4 10.789l-12 18z" mask="url(#hole-mask)"/>
+                        </svg>{{item.location}}
+                    </div>
+
+                </div>
+                <div class="[ next_date ]">
+                    <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>
+                    <div class="date-container">
+                        {% set dateParts = item.date.split('.') %}
+                        <div class="date">{{ dateParts[0] }}.{{ dateParts[1] }}</div>
+                        <div class="year">{{ dateParts[2] }}</div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+
     {% endfor %}
     </div>
-</article>
-
-<!--<article class="dummys">-->
-<!--    <div class="wrapper">-->
-<!--        <p> {{ dummy.title }} </p>-->
-<!--    </div>-->
-<!--    <br>-->
-<!--    <div class="dummys_container">-->
-<!--        {% for item in dummy.items %}-->
-<!--        <a class="[ dummy_link ] [ container ]" href="{{ item.url }}" target="_blank" title="{{ item.production }}">-->
-<!--            <div class="[ row ]">-->
-<!--                &lt;!&ndash; Block 1: Date &ndash;&gt;-->
-<!--                <div class="[ dummy_date ] [ col-4 col-md-3 ]">-->
-<!--                    <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>-->
-<!--                    {% set dateParts = item.date.split('.') %}-->
-<!--                    <div class="date">{{ dateParts[0] }}.{{ dateParts[1] }}</div>-->
-<!--                    <div class="year">{{ dateParts[2] }}</div>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash; Block 2: Details &ndash;&gt;-->
-<!--                <div class="[ dummy_details ] [ col-8 col-md-5 ]">-->
-<!--                    <div class="dummy_production">{{ item.production }}</div>-->
-<!--                    <div class="dummy_location">{{ item.location }}</div>-->
-<!--                </div>-->
-
-<!--                <div class="[ dummy_image ] [ col-12 col-md-4 ]">-->
-<!--                    <img src="{{ 'images/events/' + item.image | safe }}" alt="{{ item.production }}">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </a>-->
-<!--        {% endfor %}-->
-<!--    </div>-->
-<!--</article>-->
+</section>

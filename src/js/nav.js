@@ -20,19 +20,51 @@ $(document).ready(function () {
     // Initialize Barba.js for smooth page transitions
     barba.init({
         transitions: [{
-            name: 'opacity-transition',
+            name: 'color-transition',
             leave(data) {
                 return gsap.to(data.current.container, {
-                    opacity: 0
+                    opacity: 0,
+                    duration: 0.5
                 });
             },
             enter(data) {
                 return gsap.from(data.next.container, {
-                    opacity: 0
+                    opacity: 0,
+                    duration: 0.5
                 });
+            },
+            beforeEnter(data) {
+                const namespace = data.next.container.dataset.barbaNamespace;
+                const bgColors = {
+                    photos: "#7fa8ff",
+                    vita: "#FFEC51"
+                };
+
+                const nextBgColor = bgColors[namespace] || "white";
+
+                gsap.to("body", {
+                    backgroundColor: nextBgColor,
+                    duration: 0.5
+                });
+
+                const vitaSpan = document.querySelector(".Vita > .link-active-before");
+                const photosSpan = document.querySelector(".Photos > .link-active-before");
+
+                const backgroundColors = {
+                    index: { vita: "transparent", photos: "transparent" },
+                    photos: { vita: "transparent", photos: "blue" },
+                    vita: { vita: "blue", photos: "transparent" }
+                };
+
+                if (namespace in backgroundColors) {
+                    gsap.to(vitaSpan, { background: backgroundColors[namespace].vita, duration: 1 });
+                    gsap.to(photosSpan, { background: backgroundColors[namespace].photos, duration: 1 });
+                }
             }
         }]
     });
+
+
 
     // Mobile menu toggle
     $('.mobile-toggle').click(function () {
@@ -56,7 +88,7 @@ $(document).ready(function () {
         closeNavigation();
     });
 
-    $('.Photos').click(function (event) {
+    $('.photos').click(function (event) {
         currentUrl = window.location.href;
         if (currentUrl.includes("photos")) {
             event.preventDefault();
@@ -64,7 +96,7 @@ $(document).ready(function () {
         closeNavigation();
     });
 
-    $('.Vita').click(function (event) {
+    $('.vita').click(function (event) {
         currentUrl = window.location.href;
         if (currentUrl.includes("vita")) {
             event.preventDefault();
@@ -72,16 +104,13 @@ $(document).ready(function () {
         closeNavigation();
     });
 
-    function initializePhotoPage() {
-        const photosNav = document.querySelector('nav .Photos');
-        if (photosNav) {
-            photosNav.style.color = 'blue';
-        }
 
-        const vitaNav = document.querySelector('nav .Vita');
-        if (vitaNav) {
-            vitaNav.style.color = '';
-        }
+    function initializePhotoPage() {
+        document.body.style.backgroundColor = "cornflowerblue";
+        const photosSpan = document.querySelector(".Photos > .link-active-before");
+        const vitaSpan = document.querySelector(".Vita > .link-active-before");
+        photosSpan.style.background = "blue";
+        vitaSpan.style.background = "transparent";
 
         var grid = document.querySelector(".grid");
 
@@ -180,29 +209,42 @@ $(document).ready(function () {
 
 
     function initializeVitaPage() {
-        const photosNav = document.querySelector('nav .Photos');
-        if (photosNav) {
-            photosNav.style.color = '';
+        document.body.style.backgroundColor = "#FFEC51";
+        const photosSpan = document.querySelector(".Photos > .link-active-before");
+        const vitaSpan = document.querySelector(".Vita > .link-active-before");
+        photosSpan.style.background = "transparent";
+        vitaSpan.style.background = "blue";
+
+
+/*        if (vitaElement) {
+            vitaElement.classList.add("link-active"); // Add class first
+
+            gsap.to(vitaElement, {
+                textDecorationColor: "black", // Fade in the underline
+                duration: 10,
+                ease: "power2.out"
+            });
+        }*/
+
+/*        if (vitaElement) {
+            vitaElement.classList.add("link-active");
         }
 
-        const vitaNav = document.querySelector('nav .Vita');
-        if (vitaNav) {
-            vitaNav.style.color = 'blue';
-        }
+        if (photosElement) {
+            photosElement.classList.remove("link-active");
+        }*/
     }
 
     function initializeIntroPage() {
-        const photosNav = document.querySelector('nav .Photos');
-        if (photosNav) {
-            photosNav.style.color = '';
+        const video = document.getElementById("video");
+
+        if (isIntroPage() && video) {
+            video.play().catch(error => {
+                console.error("Autoplay failed:", error);
+            });
         }
 
-        const vitaNav = document.querySelector('nav .Vita');
-        if (vitaNav) {
-            vitaNav.style.color = '';
-        }
-
-        const videoSection = document.querySelector('.video-section');
+/*        const videoSection = document.querySelector('.video-section');
         const cursor = document.querySelector('.cursor');
 
         videoSection.addEventListener('mouseenter', () => {
@@ -211,7 +253,7 @@ $(document).ready(function () {
 
         videoSection.addEventListener('mouseleave', () => {
             cursor.classList.remove('disable-cursor');
-        });
+        });*/
     }
 
     if (isPhotosPage()) {

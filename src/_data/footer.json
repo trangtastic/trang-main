@@ -1,24 +1,16 @@
 {
   "items": [
     {
-      "text": "Email",
+      "text": "trang@magenta.de",
       "url": "mailto:trang@magenta.de?subject=Hey Trang!"
     },
     {
-      "text": "Instagram",
+      "text": "@trangtastic",
       "url": "https://www.instagram.com/trangtastic"
     },
     {
-      "text": "Filmmakers",
+      "text": "filmmakers.eu",
       "url": "https://www.filmmakers.eu/en/actors/trang-dong"
-    },
-    {
-      "text": "Linkedin",
-      "url": "linked.com/trangdong"
-    },
-    {
-      "text": "IMDb",
-      "url": " imdb.com/trangdong"
     }
   ]
 }

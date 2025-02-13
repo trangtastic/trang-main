@@ -1,32 +1,95 @@
-.next_container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
+section.next {
+  margin-top: 11vh;
 }
 
-.row {
+.next .title{
+  font-size: smaller;
+  margin-bottom: 0;
+  text-transform: lowercase;
+}
+
+.next svg {
+  width: 30px;
+}
+
+.next_container {
+  max-width: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+}
+
+.d-md-flex{
+
+
+
+&.row.next_link {
+  margin-bottom: 3vh !important;
+  border: 2px solid black;
+  background-color: cornflowerblue;
+  //outline: 3px dashed blue;
+  //outline-offset: 5px;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+
+  &:nth-child(1) { background-color: yellow; }
+  &:nth-child(2) { background-color: aquamarine; }
+  &:nth-child(3) { background-color: cornflowerblue; }
+  &:nth-child(4) { background-color: aliceblue; }
+  &:nth-child(4n+1) { background-color: yellow; }
+  &:nth-child(4n+2) { background-color: aquamarine; }
+  &:nth-child(4n+3) { background-color: cornflowerblue; }
+  &:nth-child(4n+4) { background-color: aliceblue; }
+
   img {
     width: 100%;
   }
 
   .date > div {
-    display: flex; /* Makes each line a flex container */
-    justify-content: space-between; /* Distributes characters evenly */
+    display: flex;
+    justify-content: space-between;
   }
 
   .date > div {
-    letter-spacing: 0; /* Reset letter-spacing if needed */
+    letter-spacing: 0;
   }
 
   .date > div span {
-    flex: 1; /* Each character takes equal space */
-    text-align: center; /* Align characters in the center of their space */
+    flex: 1;
+    text-align: center;
   }
+
+  .weekday {
+    text-transform: lowercase;
+    transform: rotate(-90deg);
+  }
+
+  .date .year {
+    text-decoration: overline;
+  }
+
+  .next_production {
+    text-transform: uppercase;
+  }
+
+  .next_location {
+    text-transform: lowercase;
+    color: blue;
+  }
+}
 }
 
 .stacked-layout {
   position: relative;
-  height: 300px;
+  height: 400px;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  svg {
+    width: 20px;
+  }
 
   .background-child {
     position: absolute;
@@ -34,24 +97,84 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: lightblue;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .background-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .background-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background: linear-gradient(0deg, rgba(109,109,109,1) 0%, rgba(255,255,255,0.27) 37%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 31%);
+
+
+    z-index: 2;
   }
 
   .foreground-child {
     position: relative;
-    border-radius: 8px;
-    padding: 20px;
-    z-index: 2;
-    margin: 10px auto;
+    z-index: 3;
     max-width: 80%;
     color: white;
   }
 
-  img {
-    max-width: 100%;
+  .next_info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh 5vh;
   }
+
+  .next_details {
+    text-align: left;
+  }
+
+  .next_production {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: xx-large;
+  }
+
+  .next_location {
+    font-weight: 300;
+  }
+
+  .next_date {
+    display: flex;
+    align-items: center;
+  }
+
+  .weekday {
+    text-transform: lowercase;
+    transform: rotate(-90deg);
+  }
+
+  .date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1.5vh;
+  }
+
+  .date {
+
+  }
+
+  .year {
+    text-decoration: overline;
+  }
+
 }
+
