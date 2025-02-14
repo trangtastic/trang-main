@@ -29,7 +29,7 @@
     {% endfor %}
 
     <!-- Card -->
-    {% for item in next.items %}
+        {% for item in next.items | upcomingEvents %}
         <a class="[ next_link ] [ stacked-layout d-block d-md-none ]" href="{{ item.url }}" target="_blank"
            title="{{ item.production }}">
             <div class="[ next_image] [ background-child ]">
