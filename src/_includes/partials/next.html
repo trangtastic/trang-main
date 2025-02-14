@@ -6,8 +6,8 @@
 
     <div class="next_container">
     <!-- Row -->
-    {% for item in next.items %}
-    <a class="[ next_link ] [ row mx-auto align-items-center mb-2 d-none d-md-flex ]" href="{{ item.url }}" target="_blank"
+        {% for item in next.items | upcomingEvents %}
+        <a class="[ next_link ] [ row mx-auto align-items-center mb-2 d-none d-md-flex ]" href="{{ item.url }}" target="_blank"
        title="www.staatstheater-wiesbaden.de">
         <div class="[ col-md-1 ]">
             <div class="weekday">{{ helpers.getWeekday(item.date) }}</div>

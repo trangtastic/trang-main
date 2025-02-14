@@ -18,6 +18,19 @@ module.exports = (config) => {
     // Add `pathPrefix` to global data
     config.addGlobalData('pathPrefix', pathPrefix);
 
+    // Filter and sort `next.items` by date
+    config.addFilter('upcomingEvents', (items) => {
+        const today = new Date();
+
+        return items
+            .map(item => ({
+                ...item,
+                dateObj: new Date(item.date.split('.').reverse().join('-')) // Convert "DD.MM.YYYY" to "YYYY-MM-DD"
+            }))
+            .filter(item => item.dateObj >= today) // Remove past events
+            .sort((a, b) => a.dateObj - b.dateObj); // Sort ascending
+    });
+
     // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
     config.setUseGitIgnore(false);
 
