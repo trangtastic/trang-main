@@ -1,7 +1,7 @@
 <footer class="footer full-bg">
     <div class="wrapper">
         <div class="footer__content ">
-            <p class="title"> Kontakt </p>
+            <p class="kontakt"> Kontakt </p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
                 <path d="M7 20l5 7 5-7M12 2v23"/>
             </svg>
@@ -13,6 +13,19 @@
                     </a>
                 </li>
                 {% endfor %}
+            </ul>
+
+
+            <p class="agentur"> Agentur </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+                <path d="M7 20l5 7 5-7M12 2v23"/>
+            </svg>
+            <ul class="footer__list agentur_mail">
+            <li class="footer__item">
+                <a href="{{ footer.agentur[0].url }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                    {{ footer.agentur[0].text }}
+                </a>
+            </li>
             </ul>
         </div>
     </div>
