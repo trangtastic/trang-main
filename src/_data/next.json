@@ -2,39 +2,20 @@
   "title": "theater",
   "items": [
     {
-      "date": "13.06.2025",
-      "production": "Spiel der Illusionen",
+      "production": "an grenzen",
       "location": "Staatstheater Wiesbaden",
-      "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/spiel-der-illusionen/",
-      "image": "schale1.jpg"
+      "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/an-grenzen/",
+      "image": "",
+      "dates": ["14.03.2025", "19.03.2025", "22.03.2025"],
+      "item-index": 1
     },
     {
-      "date": "12.06.2025",
-      "production": "Haben Sie 5 Minuten",
-      "location": "Staatstheater Wiesbaden",
-      "url": "https://www.lipsum.com/",
-      "image": "schale2.jpg"
-    },
-    {
-      "date": "15.01.2024",
       "production": "Haben Sie 5 Minuten Zeit?",
       "location": "Staatstheater Wiesbaden",
-      "url": "https://www.lipsum.com/",
-      "image": "schale1.jpg"
-    },
-    {
-      "date": "16.01.2024",
-      "production": "Spiel der Illusionen",
-      "location": "Staatstheater Wiesbaden",
-      "url": "https://www.lipsum.com/",
-      "image": "schale2.jpg"
-    },
-    {
-      "date": "13.01.2024",
-      "production": "Fassaden",
-      "location": "Staatstheater Wiesbaden",
-      "url": "https://www.lipsum.com/",
-      "image": "schale1.jpg"
+      "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/haben-sie-5-minuten-zeit/",
+      "image": "schale1.jpg",
+      "dates": ["01.03.2025", "20.03.2025"],
+      "item-index": 2
     }
   ]
 }

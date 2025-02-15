@@ -1,116 +1,105 @@
-@mixin big {
-  @media only screen and (max-width: 1500px) {
-    @content;
-  }
-}
+$variables: (
+        primary-color: cornflowerblue,
+        secondary-color: yellow,
+        tertiary-color: aquamarine,
+        quaternary-color: aliceblue,
+        border-color: black,
+        text-color: blue,
+        max-width-desktop: 40vw,
+        max-width-big: 60vw,
+        max-width-medium: 85vw,
+        max-width-container: 80vw,
+        golden-ratio: 0.618
+);
 
-@mixin medium {
-  @media only screen and (max-width: 1035px) {
-    @content;
-  }
-}
-
-@mixin small {
-  @media only screen and (max-width: 766px) {
-    @content;
-  }
-}
-
-@mixin tiny {
-  @media only screen and (max-width: 477px) {
-    @content;
+@mixin responsive($breakpoint) {
+  @if $breakpoint == big {
+    @media only screen and (max-width: 1500px) { @content; }
+  } @else if $breakpoint == medium {
+    @media only screen and (max-width: 1035px) { @content; }
+  } @else if $breakpoint == small {
+    @media only screen and (max-width: 766px) { @content; }
+  } @else if $breakpoint == tiny {
+    @media only screen and (max-width: 477px) { @content; }
   }
 }
 
 section.next {
   margin-top: 10vh;
-}
 
-.next .title{
-  font-size: large;
-  margin-bottom: 11px;
-  text-transform: uppercase;
-}
-
-.next svg {
-  width: 30px;
-}
-
-.next_container {
-  max-width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
-}
-
-.d-md-flex{
-
-
-
-&.row.next_link {
-  border: 2px solid black;
-  background-color: cornflowerblue;
-  margin-top: 0;
-  margin-bottom: 3vh !important;
-  width: 40vw;
-  @include big {
-    width: 60vw;
-  }
-  @include medium {
-    width: 85vw;
-  }
-
-  &:nth-child(1) { background-color: yellow; }
-  &:nth-child(2) { background-color: aquamarine; }
-  &:nth-child(3) { background-color: cornflowerblue; }
-  &:nth-child(4) { background-color: aliceblue; }
-  &:nth-child(4n+1) { background-color: yellow; }
-  &:nth-child(4n+2) { background-color: aquamarine; }
-  &:nth-child(4n+3) { background-color: cornflowerblue; }
-  &:nth-child(4n+4) { background-color: aliceblue; }
-
-  img {
-    width: 100%;
-  }
-
-  .date > div {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .date > div {
-    letter-spacing: 0;
-  }
-
-  .date > div span {
-    flex: 1;
-    text-align: center;
-  }
-
-  .weekday {
-    text-transform: lowercase;
-    transform: rotate(-90deg);
-  }
-
-  .date .year {
-    text-decoration: overline;
-  }
-
-  .next_production {
+  .title {
+    font-size: large;
+    margin-bottom: 11px;
     text-transform: uppercase;
   }
 
-  .next_location {
-    text-transform: lowercase;
-    color: blue;
+  svg {
+    width: 30px;
   }
 }
+
+.next_container {
+  max-width: map-get($variables, max-width-container);
+  margin: 10vh auto 0 auto;
+}
+
+.d-md-flex {
+  &.row.next_link {
+    border: 2px solid map-get($variables, border-color);
+    background-color: map-get($variables, primary-color);
+    margin-bottom: 3vh !important;
+    width: map-get($variables, max-width-desktop);
+
+    @include responsive(big) { width: map-get($variables, max-width-big); }
+    @include responsive(medium) { width: map-get($variables, max-width-medium); }
+
+    @each $index, $color in (1: primary-color, 2: secondary-color, 3: tertiary-color, 4: quaternary-color) {
+      &.production-#{$index} {
+        background-color: map-get($variables, $color);
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .date {
+      > div {
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0;
+
+        span {
+          flex: 1;
+          text-align: center;
+        }
+      }
+
+      .year {
+        text-decoration: overline;
+      }
+    }
+
+    .weekday {
+      text-transform: lowercase;
+      transform: rotate(-90deg);
+    }
+
+    .next_production {
+      text-transform: uppercase;
+    }
+
+    .next_location {
+      text-transform: lowercase;
+      color: map-get($variables, text-color);
+    }
+  }
 }
 
 .stacked-layout {
   position: relative;
-  width: 80vw;
-  min-height: calc(80vw * 0.618); //golden rule was applied here. when uploading new images make sure that...
+  width: map-get($variables, max-width-container);
+  min-height: calc(map-get($variables, max-width-container) * map-get($variables, golden-ratio));
   margin: 0 auto 2vh;
   display: flex;
   flex-direction: column;
@@ -140,8 +129,7 @@ section.next {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      //border-radius: 1% 99% 0% 100% / 100% 1% 99% 0%;
-      border: 2px solid black;
+      border: 2px solid map-get($variables, border-color);
     }
 
     &::after {
@@ -152,14 +140,9 @@ section.next {
       width: 100%;
       height: 100%;
       background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 31%);
-      //border-radius: 1% 99% 0% 100% / 100% 1% 99% 0%;
       z-index: 2;
-      @include small {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 49%);
-      }
-      @include tiny {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 68%);
-      }
+      @include responsive(small) { background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 49%); }
+      @include responsive(tiny) { background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 68%); }
     }
   }
 
@@ -178,9 +161,7 @@ section.next {
     display: flex;
     justify-content: space-between;
     padding: 4vh 3vh;
-    @include small {
-      padding: 2vh 2vh;
-    }
+    @include responsive(small) { padding: 2vh 2vh; }
   }
 
   .next_details {
@@ -191,50 +172,28 @@ section.next {
     text-transform: uppercase;
     font-weight: 500;
     font-size: xx-large;
-    @include small {
-
-    }
-    @include tiny {
-      font-size: x-large;
-    }
+    @include responsive(tiny) { font-size: x-large; }
   }
 
   .next_location {
     font-weight: 300;
-    @include small {
-
-    }
-    @include tiny {
-      font-size: small
-    }
+    @include responsive(tiny) { font-size: small; }
   }
 
   .next_date {
     display: flex;
     align-items: center;
-    @include small {
-
-    }
-    @include tiny {
-      font-size: large;
-    }
-  }
-
-  .weekday {
-    text-transform: lowercase;
-    transform: rotate(-90deg);
-  }
-
-  .date-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 1.5vh;
-
-  }
-
-  .year {
-    text-decoration: overline;
+    @include responsive(tiny) { font-size: large; }
   }
 }
 
+.no-image {
+  min-height: 10vh !important;
+  color: black !important;
+  border: 2px solid map-get($variables, border-color);
+  background-color: map-get($variables, primary-color);
+
+  .next_info {
+    @include responsive(small) { padding: 1vh 2vh; }
+  }
+}

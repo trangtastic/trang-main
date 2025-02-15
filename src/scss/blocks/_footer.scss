@@ -22,9 +22,20 @@
     width: 30px;
   }
 
-  .footer__list{
+  .footer__list {
     margin-top: 2vh;
     margin-bottom: 0;
+    padding-left: 0;
+
+    .footer__item {
+      margin-top: 0.2vh;
+
+      a {
+        &:hover {
+          color: yellow;
+        }
+      }
+    }
   }
 
   .agentur_mail {
@@ -40,16 +51,4 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top;
-}
-
-.footer__list {
-  padding-left: 0;
-
-  .footer__item {
-    margin-top: 0.2vh;
-
-    a:hover{
-      color: yellow;
-    }
-  }
 }

@@ -3,11 +3,7 @@
 <html lang="de">
 <head>
     {% include "partials/meta.html" %}
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
-
-    <!-- Critical Inline Styles (First Priority) -->
     <style>{% include "css/critical.css" %}</style>
 
     {% if pageCriticalStyles %}
@@ -16,12 +12,10 @@
     {% endfor %}
     {% endif %}
 
-    <!-- Print Styles (Deferred Loading) -->
     <link rel="stylesheet" media="print" href="{{ ('/fonts/fonts.css?' ~ assetHash) | url }}" onload="this.media='all'" />
 
     {% if pageStylesheets %}
     {% for item in pageStylesheets %}
-    <!-- Additional Stylesheets (Deferred Loading) -->
     <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
     {% endfor %}
     {% endif %}
@@ -32,10 +26,7 @@
     {% block content %}
     {% endblock %}
 
-    <!-- Page cursor -->
     <div class='cursor' id="cursor"></div>
-    <div class='cursor2' id="cursor2"></div>
-    <div class='cursor3' id="cursor3"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
