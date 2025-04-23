@@ -85,11 +85,11 @@ nav {
     }
 
     li {
-      display: flex; // Allows text alignment
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 89px; // Fixed width
-      height: 40px; // Fixed height
+      width: 89px;
+      height: 40px;
       text-transform: uppercase;
 
       &:hover {
