@@ -1,11 +1,26 @@
 <footer class="footer full-bg">
     <div class="wrapper">
         <div class="footer__content ">
-            <p class="kontakt"> WRITE ME </p>
+
+            <p class="agentur"> WRITE MY AGENCY </p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
                 <path d="M7 20l5 7 5-7M12 2v23"/>
             </svg>
-            <ul class="footer__list">
+            <ul class="footer__list agentur_mail">
+                <li class="footer__item">
+                    <a href="{{ footer.agentur[0].url }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                        {{ footer.agentur[0].text }}
+                    </a>
+                </li>
+            </ul>
+
+            <br>
+
+            <p class="kontakt"> OR ME </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+                <path d="M7 20l5 7 5-7M12 2v23"/>
+            </svg>
+            <ul class="footer__list private_mail">
                 {% for item in footer.items %}
                 <li class="footer__item">
                     <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="footer__link">
@@ -15,18 +30,6 @@
                 {% endfor %}
             </ul>
 
-
-            <p class="agentur"> ... or WRITE MY AGENCY </p>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
-                <path d="M7 20l5 7 5-7M12 2v23"/>
-            </svg>
-            <ul class="footer__list agentur_mail">
-            <li class="footer__item">
-                <a href="{{ footer.agentur[0].url }}" target="_blank" rel="noopener noreferrer" class="footer__link">
-                    {{ footer.agentur[0].text }}
-                </a>
-            </li>
-            </ul>
         </div>
     </div>
 </footer>

@@ -25,7 +25,7 @@ $color2: #e8f380;
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  font-family: "Jost", sans-serif;
+  font-family: "Martian Mono", monospace;
   @include small {
     padding-top: 25px;
   }
@@ -71,7 +71,7 @@ nav {
   ul {
     list-style: none;
     display: flex; // Ensure all <li> elements stay in a row
-    gap: 35px; // Space between <li> elements
+    gap: 16px;
     text-align: right;
     padding: 0;
     margin: 0;
@@ -88,8 +88,9 @@ nav {
       display: flex; // Allows text alignment
       align-items: center;
       justify-content: center;
-      width: 67px; // Fixed width
+      width: 89px; // Fixed width
       height: 40px; // Fixed height
+      text-transform: uppercase;
 
       &:hover {
         cursor: default;
@@ -146,22 +147,6 @@ nav {
       }
     }
 
-/*    .link-active-old {
-!*      text-decoration-line: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-      text-decoration-color: blue;*!
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 104%;
-      height: 5px;
-      background: red;
-      opacity: 1;
-      -webkit-transition: opacity 100ms linear;
-      -ms-transition: opacity 100ms linear;
-      transition: opacity 100ms linear;
-    }*/
 
     .link-active {
       position: relative;
@@ -265,17 +250,14 @@ nav {
 
 .mobile-toggle span:nth-child(1) {
   top: 0px;
-  //background: blue;
 }
 
 .mobile-toggle span:nth-child(2), .mobile-toggle span:nth-child(3) {
   top: 12px;
-  //background: red;
 }
 
 .mobile-toggle span:nth-child(4) {
   top: 24px;
-  //background: yellow;
 }
 
 .mobile-toggle.open-nav span:nth-child(1) {

@@ -11,7 +11,7 @@
                         {% for item in photos.items %}
                         <div class="grid-item my-3 col-xl-4 col-md-6 col-sm-12">
                             <div class="overflow-hidden box-img">
-                                <img src='{{ item.photo }}' class="clickable-image">
+                                <img src="{{ item.photo }}" class="clickable-image" alt="Photo by {{ item.photographer }}">
                                 <p class="photographer-name">© {{ item.photographer }}</p>
                             </div>
                         </div>
@@ -25,23 +25,22 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <button type="button" class="btn-close modal-close-button" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                            <button type="button" class="btn-close modal-close-button" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div id="carouselExampleIndicators" class="carousel slide" data-bs-keyboard="true">
                                 <div class="carousel-inner">
                                     {% for item in photos.items %}
-                                    <div class="carousel-item {% if loop.first %}active{% endif %}">
-                                        <img src="{{ item.photo }}" class="d-block w-100" alt="Image {{ loop.index }}">
+                                    <div class="carousel-item{% if loop.first %} active{% endif %}">
+                                        <img src="{{ item.photo }}" class="d-block w-100" alt="Image {{ loop.index }} by {{ item.photographer }}">
                                         <p class="photographer-name">© {{ item.photographer }}</p>
                                     </div>
                                     {% endfor %}
                                 </div>
-                                <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>

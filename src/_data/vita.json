@@ -4,20 +4,20 @@
     "title": "Persona",
     "items": [
       {
-        "title": "Residence",
+        "title": "LOCATION ",
         "property": "Wiesbaden"
+      },
+      {
+        "title": "HOUSING OPTIONS ",
+        "property": "Berlin Cologne Munich Frankfurt Hamburg"
       },
       {
         "title": "Height",
         "property": "154cm"
       },
       {
-        "title": "Dialect",
-        "property": "Berlin"
-      },
-      {
         "title": "Licence",
-        "property": "B - Car"
+        "property": "B-Car"
       }
     ]
   },

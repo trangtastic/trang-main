@@ -1,3 +1,11 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 894px) { @content; }
+  } @else if $breakpoint == small {
+    @media only screen and (max-width: 600px) { @content; }
+  }
+}
+
 .footer {
   margin-top: 15vh;
   padding-top: 5vh;
@@ -12,10 +20,12 @@
 
   .kontakt {
     margin-top: 1.5vw;
+    font-size: small;
   }
 
   .agentur {
     margin-top: 55px;
+    font-size: small;
   }
 
   svg {
@@ -29,6 +39,7 @@
 
     .footer__item {
       margin-top: 0.2vh;
+      text-transform: uppercase;
 
       a {
         &:hover {
@@ -40,6 +51,14 @@
 
   .agentur_mail {
     padding: 0 10px 20px 10px;
+    font-size: xxx-large;
+    @include responsive(medium) { font-size: xx-large }
+    @include responsive(small) { font-size: x-large }
+  }
+
+  .private_mail {
+    font-size: xx-large;
+    @include responsive(small) { font-size: x-large }
   }
 }
 

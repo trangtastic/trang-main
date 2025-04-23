@@ -244,16 +244,6 @@ $(document).ready(function () {
             });
         }
 
-/*        const videoSection = document.querySelector('.video-section');
-        const cursor = document.querySelector('.cursor');
-
-        videoSection.addEventListener('mouseenter', () => {
-            cursor.classList.add('disable-cursor');
-        });
-
-        videoSection.addEventListener('mouseleave', () => {
-            cursor.classList.remove('disable-cursor');
-        });*/
     }
 
     if (isPhotosPage()) {

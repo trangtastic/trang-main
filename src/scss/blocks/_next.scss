@@ -5,9 +5,9 @@ $variables: (
         quaternary-color: aliceblue,
         border-color: black,
         text-color: blue,
-        max-width-desktop: 40vw,
+        max-width-desktop: 50vw,
         max-width-big: 60vw,
-        max-width-medium: 85vw,
+        max-width-medium: 80vw,
         max-width-container: 80vw,
         golden-ratio: 0.618
 );
@@ -19,6 +19,8 @@ $variables: (
     @media only screen and (max-width: 1035px) { @content; }
   } @else if $breakpoint == small {
     @media only screen and (max-width: 766px) { @content; }
+  } @else if $breakpoint == short {
+    @media only screen and (max-width: 665px) { @content; }
   } @else if $breakpoint == tiny {
     @media only screen and (max-width: 477px) { @content; }
   }
@@ -77,12 +79,19 @@ section.next {
 
       .year {
         text-decoration: overline;
+        letter-spacing: 4px;
       }
     }
 
     .weekday {
       text-transform: lowercase;
       transform: rotate(-90deg);
+    }
+
+    .next_details {
+      padding-left: 40px;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
 
     .next_production {
@@ -160,12 +169,14 @@ section.next {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 4vh 3vh;
-    @include responsive(small) { padding: 2vh 2vh; }
+    padding-right: 3vh;
+     padding-left: 3vh;
+    @include responsive(small) { padding-bottom: 1.5vh }
   }
 
   .next_details {
     text-align: left;
+    @include responsive(short) { font-size: 1rem }
   }
 
   .next_production {
@@ -182,18 +193,28 @@ section.next {
 
   .next_date {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     @include responsive(tiny) { font-size: large; }
+
+    .weekday {
+      transform: rotate(-90deg);
+      padding-left: 30px;
+    }
+
+    .weekday, .date-container {
+      align-self: flex-end;
+    }
+
+    .year {
+      text-decoration: overline;
+    }
   }
 }
 
 .no-image {
-  min-height: 10vh !important;
+  min-height: 14vh !important;
+  @include responsive(short) { min-height: 18vh !important;}
   color: black !important;
   border: 2px solid map-get($variables, border-color);
   background-color: map-get($variables, primary-color);
-
-  .next_info {
-    @include responsive(small) { padding: 1vh 2vh; }
-  }
 }
