@@ -89,7 +89,7 @@ section.next {
     }
 
     .next_details {
-      padding-left: 40px;
+      padding-left: 44px;
       padding-top: 15px;
       padding-bottom: 15px;
     }
@@ -101,6 +101,7 @@ section.next {
     .next_location {
       text-transform: lowercase;
       color: map-get($variables, text-color);
+      font-size: medium;
     }
   }
 }

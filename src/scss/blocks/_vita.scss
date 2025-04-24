@@ -1,0 +1,54 @@
+.vita-content {
+  min-width: 50vw;
+  margin: auto 13vw;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 0;
+  margin-top: 25px;
+}
+
+.list li {
+  position: relative;
+  padding-left: 6em; /* space for the year */
+}
+
+.list li::before {
+  content: attr(data-year);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #555;
+}
+
+
+
+//ALL
+.by {
+  font-size: xx-small;
+}
+
+.name {
+  font-size: small;
+}
+
+//TITLE
+.title {
+  margin-top: 55px;
+  text-transform: uppercase;
+}
+
+//TV
+.company {
+   color: blue;
+   font-size: small;
+}
+
+//STAGE:
+.production {
+  text-transform: uppercase;
+}

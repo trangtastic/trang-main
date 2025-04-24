@@ -16,6 +16,14 @@
       "image": "schale1.jpg",
       "dates": ["01.03.2026", "20.03.2026"],
       "item-index": 2
+    },
+    {
+      "production": "Wie es euch gefällt",
+      "location": "Staatstheater Wiesbaden",
+      "url": "https://www.staatstheater-wiesbaden.de/spielplan/a-z/haben-sie-5-minuten-zeit/",
+      "image": "schale1.jpg",
+      "dates": ["01.03.2026", "20.03.2026"],
+      "item-index": 3
     }
   ]
 }

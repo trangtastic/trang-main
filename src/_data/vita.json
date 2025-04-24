@@ -4,43 +4,64 @@
     "title": "Persona",
     "items": [
       {
-        "title": "LOCATION ",
+        "title": "lives in... ",
         "property": "Wiesbaden"
       },
       {
-        "title": "HOUSING OPTIONS ",
+        "title": "could sleep in... ",
         "property": "Berlin Cologne Munich Frankfurt Hamburg"
       },
       {
-        "title": "Height",
+        "title": "measures... ",
         "property": "154cm"
       },
       {
-        "title": "Licence",
-        "property": "B-Car"
+        "title": "speaks...",
+        "property": "German English Vietnamese"
+      },
+      {
+        "title": "can drive...",
+        "property": "\uD83D\uDE97\uD83C\uDF2C\uFE0F"
+      },
+      {
+        "title": "and...",
+        "property": "\uD83C\uDFCA\u200D♀\uFE0F\uD83D\uDCA6 \uD83C\uDFC3\u200D♀\uFE0F \uD83C\uDFB8 \uD83E\uDDD7\u200D♂\uFE0F \uD83D\uDD7A\uD83C\uDFFB \uD83C\uDFB6 \u26BD \uD83C\uDFD3 \uD83E\uDD38\u200D♀\uFE0F \uD83E\uDD39\u200D♀\uFE0F \uD83D\uDC69\uD83C\uDFFB\u200D\uD83D\uDCBB"
       }
     ]
   },
-  "film": {
-    "title": "Film",
+  "training": {
+    "title": "Training",
+    "items": [
+      {
+        "year": "2023",
+        "production": "Acting",
+        "company": "UdK Berlin"
+      }
+    ]
+  },
+  "tv": {
+    "title": "TV",
     "items": [
       {
         "year": "2024",
-        "production": "ASBEST",
-        "company": "ARD",
-        "url": "https://www.lipsum.com/"
+        "production": "ASBEST 2",
+        "direction": "Olivia Retzer + Juri Sternburg",
+        "casting": "Greta Baumann",
+        "company": "ARD"
       },
       {
         "year": "2023",
         "production": "Eine Billion Dollar",
-        "company": "Paramount",
-        "url": "https://www.lipsum.com/"
+        "direction": "Florian Baxmeyer",
+        "casting": "Natascha Zimmermann",
+        "company": "Paramount"
       },
       {
         "year": "2022",
         "production": "Ein Starkes Team",
-        "company": "ZDF",
-        "url": "https://www.lipsum.com/"
+        "direction": "Ulrich Zrenner",
+        "casting": "Nina Haun",
+        "company": "ZDF"
       }
     ]
   },
@@ -48,22 +69,30 @@
     "title": "Stage",
     "items": [
       {
+        "year": "2025",
+        "production": "An Grenzen",
+        "direction": "Susanne Frieling",
+        "author": "Özlem Özgül Dündar",
+        "venue": "Staatstheater Wiesbaden"
+      },
+      {
         "year": "2024",
-        "production": "Versicherungsabend",
-        "company": "Staatstheater Lorem Ipsum",
-        "url": "https://www.lipsum.com/"
+        "production": "Haben Sie 5 Minuten Zeit?",
+        "direction": "Marthe Meinhold + Marius Schötz",
+        "author": "Ensemble",
+        "venue": "Staatstheater Wiesbaden"
       },
       {
-        "year": "2023",
+        "year": "2024",
         "production": "Spiel der Illusionen",
-        "company": "Staatstheater Lorem Ipsum",
-        "url": "https://www.lipsum.com/"
+        "direction": "Christina Rast",
+        "venue": "Staatstheater Wiesbaden"
       },
       {
-        "year": "2022",
-        "production": "Frauen vor",
-        "company": "Staatstheater Lorem Ipsum",
-        "url": "https://www.lipsum.com/"
+        "year": "2024",
+        "production": "Frauen vor Flusslandschaft",
+        "direction": "Jens Groß",
+        "venue": "Theater Bonn"
       }
     ]
   }
