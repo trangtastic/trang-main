@@ -6,12 +6,14 @@
 <div data-barba="wrapper" class="vitawrapper">
     <div data-barba="container" data-barba-namespace="{{ namespace }}" class="vita">
         <div class="vita-content">
-            <br>
-            <br>
-            <ul>
+
+            <ul class="persona-list">
                 {% for item in vita.persona.items %}
                 <li>
-                    <strong>{{ item.title }}</strong> {{ item.property }}
+                    <span class="verb">{{ item.title }}</span>
+                    <span class="property">
+                    {{ item.property | replace('/', '<span class="seperator">&nbsp;</span>') | safe }}
+                    </span>
                 </li>
                 {% endfor %}
             </ul>
@@ -20,7 +22,7 @@
             <ul class="list">
                 {% for item in vita.training.items %}
                 <li data-year="{{ item.year }}">
-                    <span>{{ item.production }}</span>
+                    <span class="production">{{ item.production }}</span>
                     <span class="company">{{ item.company }}</span>
                 </li>
                 {% endfor %}
@@ -29,6 +31,21 @@
             <h2 class="title">{{vita.tv.title}}</h2>
             <ul class="list">
                 {% for item in vita.tv.items %}
+                <li data-year="{{ item.year }}">
+                    <span class="production">{{ item.production }}</span>
+                    <span class="by">directed by</span> <span class="name">{{ item.direction }}</span>
+                    {% if item.casting %}
+                    <span class="by">cast by</span> <span class="name">{{ item.casting }}</span>
+                    {% endif %}
+
+                    <span class="company">{{ item.company }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <h2 class="title">{{vita.film.title}}</h2>
+            <ul class="list">
+                {% for item in vita.film.items %}
                 <li data-year="{{ item.year }}">
                     <span class="production">{{ item.production }}</span>
                     <span class="by">directed by</span> <span class="name">{{ item.direction }}</span>
@@ -52,7 +69,7 @@
                     <span class="by">written by</span> <span class="name">{{ item.author }}</span>
                     {% endif %}
 
-                    <span class="by">performed at</span> <span class="name">{{ item.venue }}</span>
+                    <span class="by">at</span> <span class="name">{{ item.venue }}</span>
                 </li>
                 {% endfor %}
             </ul>
