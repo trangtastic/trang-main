@@ -52,12 +52,12 @@
     padding: 0 10px 0px 10px;
     font-size: xxx-large;
     @include responsive(medium) { font-size: xx-large }
-    @include responsive(small) { font-size: x-large }
+    @include responsive(small) { font-size: large }
   }
 
   .private_mail {
     font-size: xx-large;
-    @include responsive(small) { font-size: x-large }
+    @include responsive(small) { font-size: medium }
   }
 }
 

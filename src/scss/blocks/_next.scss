@@ -184,7 +184,8 @@ section.next {
     text-transform: uppercase;
     font-weight: 500;
     font-size: xx-large;
-    @include responsive(tiny) { font-size: x-large; }
+    @include responsive(tiny) { font-size: 17px; }
+
   }
 
   .next_location {
@@ -219,3 +220,4 @@ section.next {
   border: 2px solid map-get($variables, border-color);
   background-color: map-get($variables, primary-color);
 }
+

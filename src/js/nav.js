@@ -1,13 +1,13 @@
 function isIntroPage() {
-    return window.location.pathname === "/trang-demo/";
+    return window.location.pathname === "";
 }
 
 function isPhotosPage() {
-    return window.location.pathname === "/trang-demo/photos/";
+    return window.location.pathname === "/photos/";
 }
 
 function isVitaPage() {
-    return window.location.pathname === "/trang-demo/vita/";
+    return window.location.pathname === "/vita/";
 }
 
 
