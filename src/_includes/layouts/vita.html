@@ -12,8 +12,11 @@
                 <li>
                     <span class="verb">{{ item.title }}</span>
                     <span class="property">
-                    {{ item.property | replace('/', '<span class="seperator">&nbsp;</span>') | safe }}
-                    </span>
+            {{ item.property
+                | replace('🚙🌬️', '<span style="white-space:nowrap;">🚙🌬️</span>')
+                | replace(',', '<span class="seperator">&nbsp;</span>')
+                | safe }}
+        </span>
                 </li>
                 {% endfor %}
             </ul>
